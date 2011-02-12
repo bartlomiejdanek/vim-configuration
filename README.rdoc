@@ -1,0 +1,9 @@
+Dependencies
+* Ruby (for the fuzzy finder plugin)
+* Exuberant Ctags (http://ctags.sourceforge.net/)
+* Ncurses-term (in Linux only)
+
+  apt-get install exuberant-ctags ncurses-term
+
+After clone repository run
+  git submodule update --init

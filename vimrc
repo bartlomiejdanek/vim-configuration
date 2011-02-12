@@ -1,0 +1,190 @@
+filetype on
+filetype plugin indent on
+syntax on
+
+" turn on manager for vim plugins
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+set nocompatible
+set t_Co=256
+colorscheme molokai
+
+set backspace=indent,eol,start
+set history=1000
+set showcmd
+set showmode
+set nowrap
+set wildmenu
+set wildmode=list:longest,list:full
+set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,*.zip,*.gz,*.bz,*.tar,*.jpg,*.png,*.gif,*.avi,*.wmv,*.ogg,*.mp3,*.mov
+set clipboard+=unnamed
+set ruler
+
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set showmatch
+
+set number
+set autowrite
+set keymodel=startsel,stopsel
+set timeoutlen=250
+set ttyfast
+set lcs=tab:\ \ ,eol:$,trail:~,extends:>,precedes:<
+set novisualbell
+set noerrorbells
+set cinoptions=:0,p0,t0
+set cinwords=if,else,while,do,for,switch,case
+set formatoptions=tcqr
+
+"hide buffers when not displayed
+set hidden
+set backup                     " Enable creation of backup file.
+set backupdir=~/.vim/backup    " Where backups will go.
+set directory=~/.vim/tmp       " Where temporary files will go.
+
+"indent settings
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set autoindent
+
+"mouse settings
+set mouse=a
+
+set fo=1
+set laststatus=2
+set statusline=[%n]\ %<%f%m%r
+set statusline+=\ [%{GitBranch()}]
+set statusline+=\ %{exists('g:loaded_rvm')?rvm#statusline():''}
+set statusline+=%w\ %y\ <%{&fileformat}>%\=[%o]\ %l,%c%V\/%L\ \ %P
+
+" Command-T configuration
+let g:CommandTMaxHeight=20
+"let g:CommandTMatchWindowAtTop=1
+
+
+"
+" key binds
+"
+
+
+" mapping for navigation
+vmap <D-j> gj
+vmap <D-k> gk
+vmap <D-4> g$
+vmap <D-6> g^
+vmap <D-0> g^
+nmap <D-j> gj
+nmap <D-k> gk
+nmap <D-4> g$
+nmap <D-6> g^
+nmap <D-0> g^
+nmap <Down> gj
+nmap <Up> gk
+
+" enter fix
+map <S-Enter> O<ESC>
+map <Enter> o<ESC>
+
+" copy paste
+vnoremap <C-C> "+y
+inoremap <C-V> <ESC>"+gPi
+
+"f# keys
+nmap <silent> <F2> :set invpaste<CR>:set paste?<CR>
+nmap <silent> <F3> :set invlist<CR>:set list?<CR>
+nmap <silent> <F4> :set invwrap<CR>:set wrap?<CR>
+nmap <silent> <F5> :set invhls<CR>:set hls?<CR>
+let NERDTreeIgnore=['\.rbc$', '\~$']
+nmap <silent> <F7> :NERDTreeToggle<cr>
+nmap <silent> <F8> :shell<cr>
+
+" select all text - doesn't work with tmux
+map <C-a> ggVG
+" fix file indent
+map <C-Z> gg=G
+
+" tabs
+nnoremap  tt :tabnew<cr>
+nnoremap  x :tabnext<cr>
+nnoremap  z :tabprevious<cr>
+
+" splits
+noremap ,v :vsp^M<cr>
+noremap ,h :split^M<cr>
+
+" CTags
+map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
+
+" ConqueTerm wrapper
+function StartTerm()
+  execute 'ConqueTerm ' . $SHELL . ' --login'
+  setlocal listchars=tab:\ \
+endfunction
+
+" Remember last location in file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal g'\"" | endif
+endif
+
+" Command-e for ConqueTerm
+map <Leader>x :call StartTerm()<CR>
+
+function s:setupWrapping()
+  set wrap
+  set wm=2
+  set textwidth=72
+endfunction
+
+function s:setupMarkup()
+  call s:setupWrapping()
+  map <buffer> <Leader>p :Mm <CR>
+endfunction
+
+" make uses real tabs
+au FileType make                                     set noexpandtab
+
+" Capfile, Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
+au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
+
+" md, markdown, and mk are markdown and define buffer-local preview
+au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
+
+au BufRead,BufNewFile *.txt call s:setupWrapping()
+
+" Make json highlight as javascript
+au BufNewFile,BufRead *.json set ft=javascript
+
+" Rdoc syntax
+au BufNewFile,BufRead *.rdoc set ft=rdoc
+
+" Make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
+au FileType python  set tabstop=4 textwidth=79
+
+" gnome command line hacks ;)
+" http://vim.wikia.com/wiki/Change_cursor_shape_in_different_modes
+if has("autocmd")
+  au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+  au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+  au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape iblock"
+endif
+
+" Enable syntastic syntax checking
+let g:syntastic_enable_signs=1
+let g:syntastic_quiet_warnings=1
+
+" Taglist
+let Tlist_Enable_Fold_Column=0
+let Tlist_Compact_Format=1
+let Tlist_Show_Menu=0
+
+" Use modeline overrides
+set modeline
+set modelines=10
+
+" Trailing whitespace remove on save
+autocmd BufWritePre *.rb,*.py,*.c,*.h,*.feature,*.conf,*rc,README,CHANGELOG,README.* :%s/\s\+$//e
