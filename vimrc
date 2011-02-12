@@ -1,3 +1,4 @@
+set encoding=utf-8
 filetype on
 filetype plugin indent on
 syntax on
@@ -133,6 +134,21 @@ endif
 
 " Command-e for ConqueTerm
 map <Leader>x :call StartTerm()<CR>
+
+" change to tab #
+map 1 :tabn 1<CR>
+map 2 :tabn 2<CR>
+map 3 :tabn 3<CR>
+map 4 :tabn 4<CR>
+map 5 :tabn 5<CR>
+map 6 :tabn 6<CR>
+map 7 :tabn 7<CR>
+map 8 :tabn 8<CR>
+map 9 :tabn 9<CR>
+
+" Stop using <Insert>
+nnoremap a <Insert>
+nnoremap <Insert> \
 
 function s:setupWrapping()
   set wrap
