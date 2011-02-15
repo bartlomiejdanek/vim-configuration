@@ -102,6 +102,8 @@ nmap <silent> <F5> :set invhls<CR>:set hls?<CR>
 let NERDTreeIgnore=['\.rbc$', '\~$']
 nmap <silent> <F7> :NERDTreeToggle<cr>
 nmap <silent> <F8> :shell<cr>
+nmap <silent> <F9> :Project<CR>
+nmap <silent> <F10> \C
 
 " select all text - doesn't work with tmux
 map <C-a> ggVG
@@ -129,7 +131,7 @@ endfunction
 " Remember last location in file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal g'\"" | endif
+        \| exe "normal g'\"" | endif
 endif
 
 " Command-e for ConqueTerm
@@ -198,6 +200,8 @@ let Tlist_Enable_Fold_Column=0
 let Tlist_Compact_Format=1
 let Tlist_Show_Menu=0
 
+" Project
+let $PROJECT_HOME='~/Projects'
 " Use modeline overrides
 set modeline
 set modelines=10
