@@ -100,9 +100,6 @@
 [submodule "bundle/xterm-color-table"]
 	path = bundle/xterm-color-table
 	url = https://github.com/guns/xterm-color-table.vim.git
-[submodule "bundle/molokai"]
-	path = bundle/molokai
-	url = https://github.com/bartekd/molokai.git
 [submodule "bundle/vim-project"]
 	path = bundle/vim-project
 	url = https://github.com/shemerey/vim-project.git
