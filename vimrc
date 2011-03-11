@@ -39,6 +39,7 @@ set noerrorbells
 set cinoptions=:0,p0,t0
 set cinwords=if,else,while,do,for,switch,case
 set formatoptions=tcqr
+set foldmethod=manual
 
 "hide buffers when not displayed
 set hidden
@@ -71,7 +72,6 @@ let g:CommandTMaxHeight=20
 " key binds
 "
 
-
 " mapping for navigation
 vmap <D-j> gj
 vmap <D-k> gk
@@ -99,11 +99,17 @@ nmap <silent> <F2> :set invpaste<CR>:set paste?<CR>
 nmap <silent> <F3> :set invlist<CR>:set list?<CR>
 nmap <silent> <F4> :set invwrap<CR>:set wrap?<CR>
 nmap <silent> <F5> :set invhls<CR>:set hls?<CR>
+nmap <silent> <F6> :TlistOpen<CR>
 let NERDTreeIgnore=['\.rbc$', '\~$']
 nmap <silent> <F7> :NERDTreeToggle<cr>
 nmap <silent> <F8> :shell<cr>
 nmap <silent> <F9> :Project<CR>
-nmap <silent> <F10> \C
+nmap <silent> <F12> \C
+" folds
+inoremap <F10> <C-O>za
+nnoremap <F10> za
+onoremap <F10> <C-C>za
+vnoremap <F10> zf
 
 " select all text - doesn't work with tmux
 map <C-a> ggVG
@@ -112,12 +118,10 @@ map <C-Z> gg=G
 
 " tabs
 nnoremap  tt :tabnew<cr>
-nnoremap  x :tabnext<cr>
-nnoremap  z :tabprevious<cr>
 
 " splits
-noremap ,v :vsp^M<cr>
-noremap ,h :split^M<cr>
+noremap ,v :vsp^<cr>
+noremap ,h :split^<cr>
 
 " CTags
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
@@ -164,10 +168,10 @@ function s:setupMarkup()
 endfunction
 
 " make uses real tabs
-au FileType make                                     set noexpandtab
+au FileType make set noexpandtab
 
 " Capfile, Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
+au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 
 " md, markdown, and mk are markdown and define buffer-local preview
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
@@ -199,9 +203,10 @@ let g:syntastic_quiet_warnings=1
 let Tlist_Enable_Fold_Column=0
 let Tlist_Compact_Format=1
 let Tlist_Show_Menu=0
+nnoremap <C-]> g<C-]>
 
 " Project
-let $PROJECT_HOME='~/Projects'
+let $PROJECT_HOME='~/projects'
 " Use modeline overrides
 set modeline
 set modelines=10
