@@ -19,8 +19,11 @@ Your own VIM compilation
 * and install it ;)
 
   hg clone https://vim.googlecode.com/hg/ vim
+
   ./configure  --enable-pythoninterp
+
   make
+
   sudo make install
 
 Enjoy
