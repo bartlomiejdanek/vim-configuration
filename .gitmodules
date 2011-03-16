@@ -106,3 +106,6 @@
 [submodule "bundle/molokai"]
 	path = bundle/molokai
 	url = https://github.com/bartekd/molokai.git
+[submodule "bundle/vim-matchit"]
+	path = bundle/vim-matchit
+	url = https://github.com/edsono/vim-matchit.git
