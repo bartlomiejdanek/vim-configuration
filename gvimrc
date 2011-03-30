@@ -1,4 +1,4 @@
-set guioptions=a
+"set guioptions=a
 set guitablabel=%M%t
 set lines=210
 set columns=208

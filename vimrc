@@ -94,6 +94,11 @@ map <Enter> o<ESC>
 vnoremap <C-C> "+y
 inoremap <C-V> <ESC>"+gPi
 
+" duplicate current line
+nnoremap <C-d> Yp
+" paste to current line
+noremap p P
+
 "f# keys
 nmap <silent> <F2> :set invpaste<CR>:set paste?<CR>
 nmap <silent> <F3> :set invlist<CR>:set list?<CR>
@@ -105,11 +110,9 @@ nmap <silent> <F7> :NERDTreeToggle<cr>
 nmap <silent> <F8> :shell<cr>
 nmap <silent> <F9> :Project<CR>
 nmap <silent> <F12> \C
-" folds
-inoremap <F10> <C-O>za
-nnoremap <F10> za
-onoremap <F10> <C-C>za
-vnoremap <F10> zf
+
+" generate ctags
+map <silent> <F5>:Rtags -R --exclude=.svn --exclude=.git --exclude=log *<CR>
 
 " select all text - doesn't work with tmux
 map <C-a> ggVG
