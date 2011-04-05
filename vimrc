@@ -170,7 +170,13 @@ vnoremap <C-UP> :m-2<CR>gv=gv
 
 " NERDCommenter
 " invert comment
-map <C-f> \ci
+map <C-x> \ci
+
+" RGrep
+map <C-f> :Rgrep<CR>
+au FileType qf nmap <buffer> <cr> <cr><c-w><c-p>
+let Grep_Skip_Files = '*.bak *~ *tags'
+let Grep_Skip_Dirs = '.git .svn'
 
 function s:setupWrapping()
   set wrap
