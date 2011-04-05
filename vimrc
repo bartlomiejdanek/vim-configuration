@@ -157,6 +157,9 @@ map 9 :tabn 9<CR>
 nnoremap a <Insert>
 nnoremap <Insert> \
 
+" double 'a' as escape
+imap <silent> aa <ESC>
+
 " moving lines
 nnoremap <C-DOWN> :m+<CR>==
 nnoremap <C-UP> :m-2<CR>==
