@@ -97,7 +97,7 @@ inoremap <C-V> <ESC>"+gPi
 " duplicate current line
 nnoremap <C-d> Yp
 " paste to current line
-noremap p P
+"noremap p P
 
 "f# keys
 nmap <silent> <F2> :set invpaste<CR>:set paste?<CR>
@@ -158,6 +158,14 @@ map 9 :tabn 9<CR>
 " Stop using <Insert>
 nnoremap a <Insert>
 nnoremap <Insert> \
+
+" moving lines
+nnoremap <C-DOWN> :m+<CR>==
+nnoremap <C-UP> :m-2<CR>==
+inoremap <C-DOWN> <Esc>:m+<CR>==gi
+inoremap <C-UP> <Esc>:m-2<CR>==gi
+vnoremap <C-DOWN> :m'>+<CR>gv=gv
+vnoremap <C-UP> :m-2<CR>gv=gv
 
 function s:setupWrapping()
   set wrap
