@@ -170,7 +170,7 @@ vnoremap <C-UP> :m-2<CR>gv=gv
 
 " NERDCommenter
 " invert comment
-map <C-c> \ci
+map <C-f> \ci
 
 function s:setupWrapping()
   set wrap
