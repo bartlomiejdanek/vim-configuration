@@ -21,6 +21,7 @@ set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,*.zip,*.gz,*.bz,*.tar,*.jpg,*.png,*.gif,*.avi,*.wmv,*.ogg,*.mp3,*.mov
 set clipboard+=unnamed
 set ruler
+set cursorline
 
 set incsearch
 set hlsearch
@@ -166,6 +167,10 @@ inoremap <C-DOWN> <Esc>:m+<CR>==gi
 inoremap <C-UP> <Esc>:m-2<CR>==gi
 vnoremap <C-DOWN> :m'>+<CR>gv=gv
 vnoremap <C-UP> :m-2<CR>gv=gv
+
+" NERDCommenter
+" invert comment
+map <C-c> \ci
 
 function s:setupWrapping()
   set wrap
