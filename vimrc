@@ -31,6 +31,7 @@ set showmatch
 
 set number
 set autowrite
+set autochdir
 set keymodel=startsel,stopsel
 set timeoutlen=250
 set ttyfast
