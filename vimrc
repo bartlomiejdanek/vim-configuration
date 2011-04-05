@@ -112,9 +112,6 @@ nmap <silent> <F8> :shell<cr>
 nmap <silent> <F9> :Project<CR>
 nmap <silent> <F12> \C
 
-" generate ctags
-map <silent> <F5>:Rtags -R --exclude=.svn --exclude=.git --exclude=log *<CR>
-
 " select all text - doesn't work with tmux
 map <C-a> ggVG
 " fix file indent
@@ -128,7 +125,7 @@ noremap ,v :vsp^<cr>
 noremap ,h :split^<cr>
 
 " CTags
-map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
+map <Leader>rt :!ctags --extra=+f -R --exclude=.svn --exclude=.git --exclude=log *<CR><CR>
 
 " ConqueTerm wrapper
 function StartTerm()
