@@ -105,7 +105,7 @@ nmap <silent> <F2> :set invpaste<CR>:set paste?<CR>
 nmap <silent> <F3> :set invlist<CR>:set list?<CR>
 nmap <silent> <F4> :set invwrap<CR>:set wrap?<CR>
 nmap <silent> <F5> :set invhls<CR>:set hls?<CR>
-nmap <silent> <F6> :TlistOpen<CR>
+nmap <silent> <F6> :TlistToggle<CR>
 let NERDTreeIgnore=['\.rbc$', '\~$']
 nmap <silent> <F7> :NERDTreeToggle<cr>
 nmap <silent> <F8> :shell<cr>
