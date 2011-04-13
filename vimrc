@@ -21,7 +21,6 @@ set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,*.zip,*.gz,*.bz,*.tar,*.jpg,*.png,*.gif,*.avi,*.wmv,*.ogg,*.mp3,*.mov
 set clipboard+=unnamed
 set ruler
-set cursorline
 
 set incsearch
 set hlsearch
