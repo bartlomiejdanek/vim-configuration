@@ -118,6 +118,3 @@
 [submodule "bundle/grep"]
 	path = bundle/grep
 	url = https://github.com/vim-scripts/grep.vim.git
-[submodule "bundle/vim-css-color"]
-	path = bundle/vim-css-color
-	url = https://github.com/skammer/vim-css-color.git
