@@ -29,8 +29,8 @@ set smartcase
 set showmatch
 
 set number
-set autowrite
-set autochdir
+"set autowrite
+"set autochdir
 set keymodel=startsel,stopsel
 set timeoutlen=250
 set ttyfast
@@ -226,6 +226,8 @@ let Tlist_Enable_Fold_Column=0
 let Tlist_Compact_Format=1
 let Tlist_Show_Menu=0
 nnoremap <C-]> g<C-]>
+
+"nnoremap <C-TAB> <C-x><C-w>
 
 " Project
 let $PROJECT_HOME='~/projects'
