@@ -237,3 +237,15 @@ set modelines=10
 
 " Trailing whitespace remove on save
 autocmd BufWritePre *.rb,*.py,*.c,*.h,*.feature,*.conf,*rc,README,CHANGELOG,README.* :%s/\s\+$//e
+
+function MyTagContext()
+  if filereadable(expand('%:p:h') . '/tags')
+    return "\<c-x>\<c-]>"
+  endif
+  " no return will result in the evaluation of the next
+  " configured context
+endfunction
+
+let g:SuperTabCompletionContexts = ['MyTagContext', 's:ContextText', 's:ContextDiscover']
+let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
+let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
