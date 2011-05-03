@@ -189,6 +189,11 @@ function s:setupMarkup()
   map <buffer> <Leader>p :Mm <CR>
 endfunction
 
+" Gitv
+nnoremap <C-g> :Gitv<CR>
+inoremap <C-g> :Gitv<CR>
+vnoremap <C-g> :Gitv<CR>
+
 " make uses real tabs
 au FileType make set noexpandtab
 
