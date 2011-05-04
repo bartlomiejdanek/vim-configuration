@@ -82,9 +82,6 @@
 [submodule "bundle/vim-ruby"]
 	path = bundle/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
-[submodule "bundle/vim-markdown-preview"]
-	path = bundle/vim-markdown-preview
-	url = http://github.com/robgleeson/vim-markdown-preview.git
 [submodule "bundle/vim-ruby-snitatra"]
 	path = bundle/vim-ruby-snitatra
 	url = https://github.com/hallison/vim-ruby-sinatra.git
