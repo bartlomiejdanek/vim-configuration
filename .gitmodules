@@ -121,3 +121,6 @@
 [submodule "bundle/pairtools"]
 	path = bundle/pairtools
 	url = https://github.com/vim-scripts/PairTools.git
+[submodule "bundle/vim-notes"]
+	path = bundle/vim-notes
+	url = https://github.com/xolox/vim-notes.git
