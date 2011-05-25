@@ -124,3 +124,9 @@
 [submodule "bundle/vim-notes"]
 	path = bundle/vim-notes
 	url = https://github.com/xolox/vim-notes.git
+[submodule "bundle/vim-ruby-debugger"]
+	path = bundle/vim-ruby-debugger
+	url = https://github.com/astashov/vim-ruby-debugger.git
+[submodule "bundle/vcscommand.vim"]
+	path = bundle/vcscommand.vim
+	url = https://github.com/vim-scripts/vcscommand.vim.git

@@ -1,5 +1,5 @@
 set guioptions=a
-"set guioptions+=mT
+set guioptions+=mT
 "set guitablabel=%M%t
 set lines=30
 set columns=99
