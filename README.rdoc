@@ -5,6 +5,11 @@ Dependencies
 
   apt-get install exuberant-ctags ncurses-term
 
+* other stuff
+  sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev \
+    libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
+    libcairo2-dev libx11-dev libxpm-dev libxt-dev
+
 After clone repository run
   git submodule update --init
 
@@ -19,11 +24,17 @@ Your own VIM compilation
 * and install it ;)
 
   hg clone https://vim.googlecode.com/hg/ vim
-
-  ./configure  --enable-pythoninterp
-
+  ./configure --enable-pythoninterp --with-features=huge --enable-gui=gnome2 --enable-cscope
   make
-
   sudo make install
 
-Enjoy
+* ruby debugger
+  * rvmrc
+    echo let g:ruby_debugger_debug_mode = 1 > .rvmrc
+  * debugging
+    <Leader>b - breakpoing
+    :Rdebugger
+    :Rdebugger 'rails s' || './script/rails server' (Rails 3)
+    :Rdebugger 'ruby script/server' (Rails 2.x)
+
+Enjoy!
