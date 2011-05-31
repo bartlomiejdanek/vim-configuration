@@ -9,7 +9,7 @@ call pathogen#helptags()
 
 set nocompatible
 set t_Co=256
-colorscheme molokai
+colorscheme xoria256
 
 set backspace=indent,eol,start
 set history=1000
