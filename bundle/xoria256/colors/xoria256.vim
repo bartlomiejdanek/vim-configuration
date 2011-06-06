@@ -37,18 +37,18 @@ let colors_name = "xoria256"
 " Colours {{{1
 "" General {{{2
 hi Normal       ctermfg=252 guifg=#d0d0d0 ctermbg=234 guibg=#1c1c1c cterm=none gui=none
-"hi Cursor                                 ctermbg=214 guibg=#ffaf00
-"hi CursorColumn                           ctermbg=238 guibg=#444444
-"hi CursorLine                             ctermbg=237 guibg=#3a3a3a cterm=none gui=none
-hi Error        ctermfg=162 guifg=#df0087 ctermbg=233 guibg=#121212
-hi ErrorMsg     ctermfg=162 guifg=#df0087 ctermbg=233 guibg=#121212
+hi Cursor                                 ctermbg=214 guibg=#ffaf00
+hi CursorColumn                           ctermbg=238 guibg=#444444
+hi CursorLine                             ctermbg=237 guibg=#3a3a3a cterm=none gui=none
+hi Error        ctermfg=15  guifg=#ffffff ctermbg=1   guibg=#800000
+hi ErrorMsg     ctermfg=15  guifg=#ffffff ctermbg=1   guibg=#800000
 hi FoldColumn   ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212
 hi Folded       ctermfg=255 guifg=#eeeeee ctermbg=60  guibg=#5f5f87
 hi IncSearch    ctermfg=0   guifg=#000000 ctermbg=223 guibg=#ffdfaf cterm=none gui=none
 hi LineNr       ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212
 hi MatchParen   ctermfg=188 guifg=#dfdfdf ctermbg=68  guibg=#5f87df cterm=bold gui=bold
-
-hi MoreMsg      ctermfg=150 guifg=#afdf87
+" TODO
+" hi MoreMsg
 hi NonText      ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212 cterm=bold gui=bold
 hi Pmenu        ctermfg=0   guifg=#000000 ctermbg=250 guibg=#bcbcbc
 hi PmenuSel     ctermfg=255 guifg=#eeeeee ctermbg=243 guibg=#767676
@@ -61,14 +61,13 @@ hi SpellBad     ctermfg=160 guifg=fg      ctermbg=bg                cterm=underl
 hi SpellCap     ctermfg=189 guifg=#dfdfff ctermbg=bg  guibg=bg      cterm=underline gui=underline
 hi SpellRare    ctermfg=168 guifg=#df5f87 ctermbg=bg  guibg=bg      cterm=underline gui=underline
 hi SpellLocal   ctermfg=98  guifg=#875fdf ctermbg=bg  guibg=bg      cterm=underline gui=underline
-hi StatusLine   ctermfg=150 guifg=#afdf87 ctermbg=233 guibg=#121212 cterm=bold gui=bold
-hi StatusLineNC ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212 cterm=none gui=none
-hi TabLine      ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212 cterm=none gui=none
-hi TabLineFill  ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212 cterm=none gui=none
-hi TabLineSel   ctermfg=150 guifg=#afdf87 ctermbg=233 guibg=#121212 cterm=none gui=none
+hi StatusLine   ctermfg=15  guifg=#ffffff ctermbg=239 guibg=#4e4e4e cterm=bold gui=bold
+hi StatusLineNC ctermfg=249 guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none gui=none
+hi TabLine      ctermfg=fg  guifg=fg      ctermbg=242 guibg=#666666 cterm=none gui=none
+hi TabLineFill  ctermfg=fg  guifg=fg      ctermbg=237 guibg=#3a3a3a cterm=none gui=none
 " FIXME
 hi Title        ctermfg=225 guifg=#ffdfff
-hi Todo         ctermfg=174 guifg=#df8787 ctermbg=237 guibg=#3a3a3a
+hi Todo         ctermfg=0   guifg=#000000 ctermbg=184 guibg=#dfdf00
 hi Underlined   ctermfg=39  guifg=#00afff                           cterm=underline gui=underline
 hi VertSplit    ctermfg=237 guifg=#3a3a3a ctermbg=237 guibg=#3a3a3a cterm=none gui=none
 " hi VIsualNOS    ctermfg=24  guifg=#005f87 ctermbg=153 guibg=#afdfff cterm=none gui=none
@@ -140,3 +139,4 @@ hi treeLink       ctermfg=182  guifg=#dfafdf
 " sign define breakPoint  linehl=breakPoint  text=>>
 " sign define both        linehl=currentLine text=>>
 " sign define empty       linehl=empty
+
