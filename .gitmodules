@@ -132,4 +132,4 @@
 	url = https://github.com/vim-scripts/vcscommand.vim.git
 [submodule "bundle/xoria256"]
 	path = bundle/xoria256
-	url = https://github.com/bartekd/xoria256.vim
+	url = https://github.com/bartekd/xoria256.vim.git
