@@ -194,6 +194,10 @@ nnoremap <C-g> :Gitv<CR>
 inoremap <C-g> :Gitv<CR>
 vnoremap <C-g> :Gitv<CR>
 
+" cycle through buffers with <ALT><Left> and <ALT><Right>
+:nmap <M-Left> :bprev<CR>
+:nmap <M-Right> :bnext<CR>
+
 " make uses real tabs
 au FileType make set noexpandtab
 
