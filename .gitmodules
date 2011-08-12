@@ -133,3 +133,9 @@
 [submodule "bundle/xoria256"]
 	path = bundle/xoria256
 	url = https://github.com/bartekd/xoria256.vim.git
+[submodule "bundle/vim-filesearch"]
+	path = bundle/vim-filesearch
+	url = https://github.com/jeetsukumaran/vim-filesearch.git
+[submodule "bundle/rbrepl.vim"]
+	path = bundle/rbrepl.vim
+	url = https://github.com/Bogdanp/rbrepl.vim.git
