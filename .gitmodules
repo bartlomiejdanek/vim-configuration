@@ -139,3 +139,6 @@
 [submodule "bundle/rbrepl.vim"]
 	path = bundle/rbrepl.vim
 	url = https://github.com/Bogdanp/rbrepl.vim.git
+[submodule "bundle/histwin.vim"]
+	path = bundle/histwin.vim
+	url = https://github.com/chrisbra/histwin.vim.git
