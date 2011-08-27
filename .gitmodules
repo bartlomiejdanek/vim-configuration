@@ -142,3 +142,6 @@
 [submodule "bundle/histwin.vim"]
 	path = bundle/histwin.vim
 	url = https://github.com/chrisbra/histwin.vim.git
+[submodule "bundle/apidock.vim"]
+	path = bundle/apidock.vim
+	url = https://github.com/mileszs/apidock.vim.git

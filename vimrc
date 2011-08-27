@@ -5,7 +5,10 @@ syntax on
 
 " turn on manager for vim plugins
 call pathogen#runtime_append_all_bundles()
+
 call pathogen#helptags()
+
+set spelllang=pl
 
 set nocompatible
 set t_Co=256
@@ -56,7 +59,7 @@ set autoindent
 
 "mouse settings
 set mouse=a
-
+set mousehide
 set fo=1
 set laststatus=2
 set statusline=[%n]\ %<%f%m%r
