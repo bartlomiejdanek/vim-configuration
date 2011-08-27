@@ -145,3 +145,6 @@
 [submodule "bundle/apidock.vim"]
 	path = bundle/apidock.vim
 	url = https://github.com/mileszs/apidock.vim.git
+[submodule "bundle/rfc5424"]
+	path = bundle/rfc5424
+	url = https://github.com/vim-scripts/rfc5424.git
