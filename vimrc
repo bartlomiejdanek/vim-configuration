@@ -1,13 +1,8 @@
 set encoding=utf-8
 filetype on
-filetype plugin indent on
+call pathogen#infect()
 syntax on
-
-" turn on manager for vim plugins
-call pathogen#runtime_append_all_bundles()
-
-call pathogen#helptags()
-
+filetype plugin indent on
 set spelllang=pl
 
 set nocompatible
