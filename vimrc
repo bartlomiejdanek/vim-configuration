@@ -243,7 +243,7 @@ set modeline
 set modelines=10
 
 " Trailing whitespace remove on save
-autocmd BufWritePre *.rb,*.py,*.c,*.h,*.feature,*.conf,*rc,README,CHANGELOG,README.* :%s/\s\+$//e
+autocmd BufWritePre *.rb,*.py,*.c,*.h,*.feature,*.conf,*rc,*.yml,*.yaml,README,CHANGELOG,README.* :%s/\s\+$//e
 
 function MyTagContext()
   if filereadable(expand('%:p:h') . '/tags')

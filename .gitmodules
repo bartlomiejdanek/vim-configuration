@@ -148,3 +148,6 @@
 [submodule "bundle/rfc5424"]
 	path = bundle/rfc5424
 	url = https://github.com/vim-scripts/rfc5424.git
+[submodule "bundle/tail-bundle"]
+	path = bundle/tail-bundle
+	url = https://github.com/vim-scripts/Tail-Bundle.git
