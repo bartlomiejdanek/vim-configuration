@@ -123,7 +123,7 @@ noremap ,v :vsp^<cr>
 noremap ,h :split^<cr>
 
 " CTags
-map <Leader>rt :!ctags --extra=+f -R --exclude=.svn --exclude=.git --exclude=log *<CR><CR>
+map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=.svn --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
 
 " ConqueTerm wrapper
 function StartTerm()
@@ -286,3 +286,8 @@ function! Find(name)
   execute ":e ".l:line
 endfunction
 command! -nargs=1 Find :call Find("<args>")
+au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
+
+autocmd FileType ruby let &l:tags = pathogen#legacyjoin(pathogen#uniq(
+      \ pathogen#split(&tags) +
+      \ map(split($GEM_PATH,':'),'v:val."/gems/*/tags"')))
