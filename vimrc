@@ -125,6 +125,16 @@ noremap ,h :split^<cr>
 " CTags
 map <Leader>rt :!ctags --extra=+f -R --exclude=.svn --exclude=.git --exclude=log *<CR><CR>
 
+" Stupid shift key fixes
+cmap W w
+cmap WQ wq
+cmap wQ wq
+cmap Q q
+cmap Tabe tabe
+
+" Yank from the cursor to the end of the line, to be consistent with C and D.
+nnoremap Y y$
+
 " ConqueTerm wrapper
 function StartTerm()
   execute 'ConqueTerm ' . $SHELL . ' --login'
