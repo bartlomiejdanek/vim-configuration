@@ -133,6 +133,7 @@ cmap Qa qa
 cmap QA qa
 cmap qA qa
 cmap Q q
+cmap E q
 cmap Tabe tabe
 
 " Yank from the cursor to the end of the line, to be consistent with C and D.
