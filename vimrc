@@ -129,6 +129,9 @@ map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=.svn --exclude=log -R
 cmap W w
 cmap WQ wq
 cmap wQ wq
+cmap Qa qa
+cmap QA qa
+cmap qA qa
 cmap Q q
 cmap Tabe tabe
 
