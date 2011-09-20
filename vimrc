@@ -53,8 +53,9 @@ set expandtab
 set autoindent
 
 "mouse settings
-set mouse=a
 set mousehide
+set selectmode+=mouse
+set mouse=a
 set fo=1
 set laststatus=2
 set statusline=[%n]\ %<%f%m%r
@@ -126,14 +127,11 @@ noremap ,h :split^<cr>
 map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=.svn --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
 
 " Stupid shift key fixes
-cmap W w
 cmap WQ wq
 cmap wQ wq
 cmap Qa qa
 cmap QA qa
 cmap qA qa
-cmap Q q
-cmap E e
 cmap Tabe tabe
 
 " Yank from the cursor to the end of the line, to be consistent with C and D.
@@ -154,23 +152,18 @@ endif
 " Command-e for ConqueTerm
 map <Leader>x :call StartTerm()<CR>
 
-" change to tab #
-map 1 :tabn 1<CR>
-map 2 :tabn 2<CR>
-map 3 :tabn 3<CR>
-map 4 :tabn 4<CR>
-map 5 :tabn 5<CR>
-map 6 :tabn 6<CR>
-map 7 :tabn 7<CR>
-map 8 :tabn 8<CR>
-map 9 :tabn 9<CR>
-
 " Stop using <Insert>
 nnoremap a <Insert>
-nnoremap <Insert> \
+nnoremap <Insert> <nop>
+
+" Stop using arrow
+"map <up> <nop>
+"map <down> <nop>
+"map <left> <nop>
+"map <right> <nop>
 
 " double 'a' as escape
-imap <silent> aa <ESC>
+imap <silent> jj <ESC>
 
 " moving lines
 nnoremap <C-DOWN> :m+<CR>==
@@ -207,8 +200,12 @@ inoremap <C-g> :Gitv<CR>
 vnoremap <C-g> :Gitv<CR>
 
 " cycle through buffers with <ALT><Left> and <ALT><Right>
-:nmap <M-Left> :bprev<CR>
-:nmap <M-Right> :bnext<CR>
+nmap <M-Left> :bprev<CR>
+nmap <M-Right> :bnext<CR>
+
+" cycle tabs with <CTRL><Left> and <CTRL><Right>
+nmap <C-Left> :tabprev<CR>
+nmap <C-Right> :tabnext<CR>
 
 " make uses real tabs
 au FileType make set noexpandtab
