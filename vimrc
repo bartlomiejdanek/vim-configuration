@@ -54,7 +54,7 @@ set autoindent
 
 "mouse settings
 set mousehide
-set selectmode+=mouse
+"set selectmode+=mouse
 set mouse=a
 set fo=1
 set laststatus=2
@@ -124,7 +124,7 @@ noremap ,v :vsp^<cr>
 noremap ,h :split^<cr>
 
 " CTags
-map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=.svn --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
+map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=.svn --exclude=log -R *<CR><CR>
 
 " Stupid shift key fixes
 cmap WQ wq
