@@ -230,9 +230,9 @@ au FileType python  set tabstop=4 textwidth=79
 " gnome command line hacks ;)
 " http://vim.wikia.com/wiki/Change_cursor_shape_in_different_modes
 if has("autocmd")
-  au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
-  au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-  au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape iblock"
+  "au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+  "au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+  "au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape iblock"
 endif
 
 " Enable syntastic syntax checking
@@ -299,6 +299,8 @@ endfunction
 command! -nargs=1 Find :call Find("<args>")
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 
+map <Leader>C :cd %:p:h<CR>
 autocmd FileType ruby let &l:tags = pathogen#legacyjoin(pathogen#uniq(
       \ pathogen#split(&tags) +
       \ map(split($GEM_PATH,':'),'v:val."/gems/*/tags"')))
+
