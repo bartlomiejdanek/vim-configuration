@@ -7,7 +7,11 @@ set spelllang=pl
 
 set nocompatible
 set t_Co=256
+syntax enable
+"let g:solarized_termcolors=256
 colorscheme xoria256
+"set background=dark
+"let g:solarized_termtrans=1
 
 set backspace=indent,eol,start
 set history=1000
