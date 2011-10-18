@@ -163,3 +163,15 @@
 [submodule "bundle/zencoding-vim"]
 	path = bundle/zencoding-vim
 	url = https://github.com/mattn/zencoding-vim.git
+[submodule "bundle/gem-tags"]
+	path = bundle/gem-tags
+	url = https://github.com/tpope/gem-ctags.git
+[submodule "bundle/gem-browse"]
+	path = bundle/gem-browse
+	url = https://github.com/tpope/gem-browse.git
+[submodule "bundle/vim-repeat"]
+	path = bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "bundle/vim-commentary"]
+	path = bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
