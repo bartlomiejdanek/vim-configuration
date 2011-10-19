@@ -3,15 +3,21 @@ filetype on
 call pathogen#infect()
 syntax on
 filetype plugin indent on
-set spelllang=pl
+set spelllang=en_gb
+set spell
 
 set nocompatible
-set t_Co=256
+"set t_Co=256
 syntax enable
 "let g:solarized_termcolors=256
-colorscheme xoria256
+"colorscheme xoria256
+"colorscheme solarized
 "set background=dark
 "let g:solarized_termtrans=1
+"set guifont=DroidSansMonoDotted:h11
+syntax enable
+set background=dark
+colorscheme solarized
 
 set backspace=indent,eol,start
 set history=1000
@@ -65,7 +71,7 @@ set laststatus=2
 set statusline=[%n]\ %<%f%m%r
 set statusline+=\ [%{GitBranch()}]
 set statusline+=\ %{exists('g:loaded_rvm')?rvm#statusline():''}
-set statusline+=%w\ %y\ <%{&fileformat}>%\=[%o]\ %l,%c%V\/%L\ \ %P
+set statusline+=%w\<%{&fileformat}>%\=[%o]\ %l,%c%V\/%L\ \ %P
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
@@ -308,3 +314,7 @@ autocmd FileType ruby let &l:tags = pathogen#legacyjoin(pathogen#uniq(
       \ pathogen#split(&tags) +
       \ map(split($GEM_PATH,':'),'v:val."/gems/*/tags"')))
 
+map gr :grep <cword> *<CR>
+map gr :grep <cword> %:p:h/*<CR>
+map gR :grep \b<cword>\b *<CR>
+map GR :grep \b<cword>\b %:p:h/*<CR>
