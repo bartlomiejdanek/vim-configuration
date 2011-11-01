@@ -13,6 +13,7 @@ set spelllang=en_gb
 set nocompatible
 syntax enable
 set background=dark
+colorscheme xoria256
 
 " =========================================
 " BASIC CONFIGURATION
