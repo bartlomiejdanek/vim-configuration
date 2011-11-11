@@ -118,3 +118,6 @@
 [submodule "bundle/xoria256"]
 	path = bundle/xoria256
 	url = git://github.com/bartekd/xoria256.vim.git
+[submodule "bundle/multiple-search"]
+	path = bundle/multiple-search
+	url = https://github.com/vim-scripts/MultipleSearch2.vim.git
