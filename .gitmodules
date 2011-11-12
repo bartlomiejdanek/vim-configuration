@@ -124,3 +124,6 @@
 [submodule "bundle/vim-grep"]
 	path = bundle/vim-grep
 	url = https://github.com/vim-scripts/grep.vim.git
+[submodule "bundle/xterm-color-table"]
+	path = bundle/xterm-color-table
+	url = https://github.com/guns/xterm-color-table.vim.git
