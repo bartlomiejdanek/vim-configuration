@@ -121,3 +121,6 @@
 [submodule "bundle/multiple-search"]
 	path = bundle/multiple-search
 	url = https://github.com/vim-scripts/MultipleSearch2.vim.git
+[submodule "bundle/vim-grep"]
+	path = bundle/vim-grep
+	url = https://github.com/vim-scripts/grep.vim.git

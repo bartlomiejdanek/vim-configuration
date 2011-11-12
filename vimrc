@@ -240,6 +240,12 @@ let $PROJECT_HOME='~/projects'
 set modeline
 set modelines=10
 
+" rgrep
+map <C-f> :Rgrep<CR>
+au FileType qf nmap <buffer> <cr> <cr><c-w><c-p>
+let Grep_Skip_Files = '*.bak *~ *tags *.log'
+let Grep_Skip_Dirs = '.git .svn'"
+
 " =========================================
 " OTHER HACKS
 " =========================================
@@ -253,8 +259,11 @@ endif
 " change current location
 map <Leader>C :cd %:p:h<CR>
 
-" greps
-map gr :grep <cword> *<CR>
-map gr :grep <cword> %:p:h/*<CR>
-map gR :grep \b<cword>\b *<CR>
-map GR :grep \b<cword>\b %:p:h/*<CR>
+" Remove whitespaces on save
+autocmd BufWritePre *.rb,*.py,*.c,*.h,*.feature,*.conf,*rc,*.yml,*.yaml,README,CHANGELOG,README.* :%s/\s\+$//e"
+
+" Quick fix for Mac Os X Rgrep"
+let s:os = system("uname")
+if s:os =~ "Darwin"
+  let g:Grep_Xargs_Options='-0'
+endif
