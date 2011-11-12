@@ -102,15 +102,14 @@ au FileType python  set tabstop=2
 " GUI SETTINGS
 " =========================================
 
-if has("gui_runnning")
-  set guioptions=a
-  set guioptions+=m
-  "set guitablabel=%M%t
-  set lines=30
-  set columns=99
-  "set guifont=Droid\ Sans\ Mono\ Dotted\ 10
-  set guicursor=a:blinkon0
-endif
+set guioptions=a
+set guioptions+=m
+"set guitablabel=%M%t
+set lines=80
+set columns=200
+set guifont=Droid\ Sans\ Mono\ Dotted:h11
+set noantialias
+""set guicursor=a:blinkon0
 
 " =========================================
 " KEYBINDS
