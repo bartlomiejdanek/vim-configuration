@@ -127,3 +127,6 @@
 [submodule "bundle/xterm-color-table"]
 	path = bundle/xterm-color-table
 	url = https://github.com/guns/xterm-color-table.vim.git
+[submodule "bundle/vim-dart"]
+	path = bundle/vim-dart
+	url = https://github.com/bartekd/vim-dart.git
