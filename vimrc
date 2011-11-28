@@ -107,7 +107,6 @@ set guioptions+=m
 "set guitablabel=%M%t
 set lines=80
 set columns=200
-set guifont=Droid\ Sans\ Mono\ Dotted:h11
 set noantialias
 ""set guicursor=a:blinkon0
 
@@ -266,4 +265,7 @@ autocmd BufWritePre *.rb,*.py,*.c,*.h,*.feature,*.conf,*rc,*.yml,*.yaml,README,C
 let s:os = system("uname")
 if s:os =~ "Darwin"
   let g:Grep_Xargs_Options='-0'
+  set guifont=Droid\ Sans\ Mono\ Dotted:h10.5
+else
+  set guifont=Droid\ Sans\ Mono\ Dotted\ 8.8
 endif
