@@ -55,9 +55,6 @@
 [submodule "bundle/vim-textile"]
 	path = bundle/vim-textile
 	url = git://github.com/timcharper/textile.vim.git
-[submodule "bundle/vim-snipmate"]
-	path = bundle/vim-snipmate
-	url = git://github.com/msanders/snipmate.vim.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
@@ -112,9 +109,6 @@
 [submodule "bundle/vim-addon-mw-utils"]
 	path = bundle/vim-addon-mw-utils
         url = git://github.com/MarcWeber/vim-addon-mw-utils.git
-[submodule "bundle/snipmate-snippets"]
-	path = bundle/snipmate-snippets
-	url = git://github.com/scrooloose/snipmate-snippets.git
 [submodule "bundle/xoria256"]
 	path = bundle/xoria256
 	url = git://github.com/bartekd/xoria256.vim.git
@@ -130,3 +124,6 @@
 [submodule "bundle/vim-dart"]
 	path = bundle/vim-dart
 	url = https://github.com/bartekd/vim-dart.git
+[submodule "bundle/better-snipmate-snippets"]
+	path = bundle/better-snipmate-snippets
+	url = git://github.com/bartekd/better-snipmate-snippets.git
