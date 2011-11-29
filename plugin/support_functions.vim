@@ -1,0 +1,1 @@
+/Users/bard/.vim/bundle/snipmate-snippets/support_functions.vim
