@@ -134,8 +134,12 @@ map <S-Enter> O<ESC>
 map <Enter> o<ESC>
 
 " copy paste
-vnoremap <C-C> "+y
-inoremap <C-V> <ESC>"+gPi
+vmap <C-c> y<Esc>i
+vmap <C-x> d<Esc>i
+imap <C-v> <Esc>pi
+imap <C-y> <Esc>ddi
+map <C-z> <Esc>
+imap <C-z> <Esc>ui
 
 " duplicate current line
 nnoremap <C-d> Yp
