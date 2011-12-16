@@ -10,6 +10,7 @@ set spelllang=en_gb
 " THEME
 " =========================================
 
+set t_Co=256
 set nocompatible
 syntax enable
 set background=dark

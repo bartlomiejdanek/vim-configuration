@@ -127,3 +127,6 @@
 [submodule "bundle/better-snipmate-snippets"]
 	path = bundle/better-snipmate-snippets
 	url = git://github.com/bartekd/better-snipmate-snippets.git
+[submodule "bundle/vcscommand"]
+	path = bundle/vcscommand
+	url = git://repo.or.cz/vcscommand
