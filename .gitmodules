@@ -70,63 +70,84 @@
 [submodule "bundle/vim-ruby"]
 	path = bundle/vim-ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
+        ignore = untracked
 [submodule "bundle/rvm"]
 	path = bundle/rvm
 	url = git://github.com/csexton/rvm.vim.git
+        ignore = untracked
 [submodule "bundle/vim-project"]
 	path = bundle/vim-project
 	url = git://github.com/shemerey/vim-project.git
+        ignore = untracked
 [submodule "bundle/vim-matchit"]
 	path = bundle/vim-matchit
 	url = git://github.com/edsono/vim-matchit.git
+        ignore = untracked
 [submodule "bundle/gitv"]
 	path = bundle/gitv
 	url = git://github.com/gregsexton/gitv.git
+        ignore = untracked
 [submodule "bundle/vim-ruby-debugger"]
 	path = bundle/vim-ruby-debugger
 	url = git://github.com/astashov/vim-ruby-debugger.git
+        ignore = untracked
 [submodule "bundle/vim-coffee-script"]
 	path = bundle/vim-coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
+        ignore = untracked
 [submodule "bundle/vim-zencoding"]
 	path = bundle/vim-zencoding
 	url = git://github.com/mattn/zencoding-vim.git
+        ignore = untracked
 [submodule "bundle/rfc5424"]
 	path = bundle/rfc5424
 	url = git://github.com/vim-scripts/rfc5424.git
+        ignore = untracked
 [submodule "bundle/vim-apidock"]
 	path = bundle/vim-apidock
 	url = git://github.com/mileszs/apidock.vim.git
+        ignore = untracked
 [submodule "bundle/rbrepl"]
 	path = bundle/rbrepl
 	url = git://github.com/Bogdanp/rbrepl.vim.git
+        ignore = untracked
 [submodule "bundle/vim-notes"]
 	path = bundle/vim-notes
 	url = git://github.com/xolox/vim-notes.git
+        ignore = untracked
 [submodule "bundle/vim-tlib"]
 	path = bundle/vim-tlib
 	url = git://github.com/tomtom/tlib_vim.git
+        ignore = untracked
 [submodule "bundle/vim-addon-mw-utils"]
 	path = bundle/vim-addon-mw-utils
         url = git://github.com/MarcWeber/vim-addon-mw-utils.git
+        ignore = untracked
 [submodule "bundle/xoria256"]
 	path = bundle/xoria256
 	url = git://github.com/bartekd/xoria256.vim.git
+        ignore = untracked
 [submodule "bundle/multiple-search"]
 	path = bundle/multiple-search
 	url = https://github.com/vim-scripts/MultipleSearch2.vim.git
+        ignore = untracked
 [submodule "bundle/vim-grep"]
 	path = bundle/vim-grep
 	url = https://github.com/vim-scripts/grep.vim.git
+        ignore = untracked
 [submodule "bundle/xterm-color-table"]
 	path = bundle/xterm-color-table
 	url = https://github.com/guns/xterm-color-table.vim.git
+        ignore = untracked
 [submodule "bundle/vim-dart"]
 	path = bundle/vim-dart
 	url = https://github.com/bartekd/vim-dart.git
+        ignore = untracked
 [submodule "bundle/better-snipmate-snippets"]
 	path = bundle/better-snipmate-snippets
 	url = git://github.com/bartekd/better-snipmate-snippets.git
-[submodule "bundle/vcscommand"]
-	path = bundle/vcscommand
-	url = git://repo.or.cz/vcscommand
+        ignore = untracked
+[submodule "bundle/git-vim"]
+	path = bundle/git-vim
+	url = https://github.com/motemen/git-vim.git
+        ignore = untracked

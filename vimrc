@@ -99,17 +99,9 @@ au BufNewFile,BufRead *.rdoc set ft=rdoc
 " Make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
 au FileType python  set tabstop=2
 
-" =========================================
 " GUI SETTINGS
-" =========================================
 
-set guioptions=a
-set guioptions+=m
-"set guitablabel=%M%t
-set lines=80
-set columns=200
-set noantialias
-""set guicursor=a:blinkon0
+so ~/.vim/vim_gui.vim
 
 " =========================================
 " KEYBINDS
@@ -133,30 +125,25 @@ nmap <Up> gk
 map <S-Enter> O<ESC>
 map <Enter> o<ESC>
 
-" copy paste
-vmap <C-c> y<Esc>i
-vmap <C-x> d<Esc>i
-imap <C-v> <Esc>pi
-imap <C-y> <Esc>ddi
-map <C-z> <Esc>
-imap <C-z> <Esc>ui
-
 " duplicate current line
 nnoremap <C-d> Yp
 " paste to current line
 "noremap p P
 
+" change current location
+map <Leader>C :cd %:p:h<CR>
+
 "f# keys
-nmap <silent> <F2> :set invpaste<CR>:set paste?<CR>
-nmap <silent> <F3> :set invlist<CR>:set list?<CR>
-nmap <silent> <F4> :set invwrap<CR>:set wrap?<CR>
-nmap <silent> <F5> :set invhls<CR>:set hls?<CR>
-nmap <silent> <F6> :TlistToggle<CR>
+" nmap <silent> <F2> :set invpaste<CR>:set paste?<CR>
+nmap <silent> <F2> :NERDTreeToggle<cr>
+nmap <silent> <F3> :Project<CR>
+nmap <silent> <F4> :TlistToggle<CR>
+nmap <silent> <F5> :set invlist<CR>:set list?<CR>
+nmap <silent> <F6> :set invwrap<CR>:set wrap?<CR>
+nmap <silent> <F7> :set invhls<CR>:set hls?<CR>
 let NERDTreeIgnore=['\.rbc$', '\~$']
-nmap <silent> <F7> :NERDTreeToggle<cr>
-nmap <silent> <F8> :shell<cr>
-nmap <silent> <F9> :Project<CR>
-nmap <silent> <F12> \C
+" nmap <silent> <F8> :shell<cr>
+nmap <silent> <F8> \C
 
 " select all text - doesn't work with tmux
 map <C-a> ggVG
@@ -260,17 +247,13 @@ if has("autocmd")
         \| exe "normal g'\"" | endif
 endif
 
-" change current location
-map <Leader>C :cd %:p:h<CR>
-
 " Remove whitespaces on save
 autocmd BufWritePre *.rb,*.py,*.c,*.h,*.feature,*.conf,*rc,*.yml,*.yaml,README,CHANGELOG,README.* :%s/\s\+$//e"
 
 " Quick fix for Mac Os X Rgrep"
 let s:os = system("uname")
 if s:os =~ "Darwin"
-  let g:Grep_Xargs_Options='-0'
-  set guifont=Droid\ Sans\ Mono\ Dotted:h10.5
+  so ~/.vim/os/darwin.vim
 else
-  set guifont=Droid\ Sans\ Mono\ Dotted\ 8.8
+  so ~/.vim/os/linux.vim
 endif
