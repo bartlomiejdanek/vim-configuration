@@ -39,6 +39,8 @@ set smartcase
 set showmatch
 
 set number
+set linebreak
+set showbreak=...
 "set autowrite
 "set autochdir
 set keymodel=startsel,stopsel
@@ -136,7 +138,8 @@ map <Leader>C :cd %:p:h<CR>
 "f# keys
 " nmap <silent> <F2> :set invpaste<CR>:set paste?<CR>
 nmap <silent> <F2> :NERDTreeToggle<cr>
-nmap <silent> <F3> :Project<CR>
+" nmap <silent> <F3> :Project<CR>
+nmap <silent> <F3> :GundoToggle<CR>
 nmap <silent> <F4> :TlistToggle<CR>
 nmap <silent> <F5> :set invlist<CR>:set list?<CR>
 nmap <silent> <F6> :set invwrap<CR>:set wrap?<CR>
@@ -172,7 +175,6 @@ cmap Tabe tabe
 nnoremap Y y$
 
 " Stop using <Insert>
-nnoremap a <Insert>
 nnoremap <Insert> <nop>
 
 " Stop using arrows
@@ -191,6 +193,12 @@ inoremap <C-DOWN> <Esc>:m+<CR>==gi
 inoremap <C-UP> <Esc>:m-2<CR>==gi
 vnoremap <C-DOWN> :m'>+<CR>gv=gv
 vnoremap <C-UP> :m-2<CR>gv=gv
+
+" expand path to file
+map <leader>ew :e <C-R>=expand("%:p:h") ."/"<CR>
+map <leader>es :sp <C-R>=expand("%:p:h") ."/"<CR>
+map <leader>ev :vsp <C-R>=expand("%:p:h") ."/"<CR>
+map <leader>et :tabe <C-R>=expand("%:p:h") ."/"<CR>
 
 " cycle through buffers with <ALT><Left> and <ALT><Right>
 nmap <M-Left> :bprev<CR>
@@ -245,6 +253,11 @@ let Grep_Skip_Dirs = '.git .svn'"
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
         \| exe "normal g'\"" | endif
+endif
+
+" Autoreload VIM config
+if has("autocmd")
+  autocmd BufWritePost *vimrc source $MYVIMRC
 endif
 
 " Remove whitespaces on save
