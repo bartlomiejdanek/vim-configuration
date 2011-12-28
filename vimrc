@@ -78,7 +78,8 @@ set fo=1
 set laststatus=2
 set statusline=[%n]\ %<%f%m%r
 set statusline+=\ %{exists('g:loaded_rvm')?rvm#statusline():''}
-set statusline+=%w\<%{&fileformat}>%\=[%o]\ %l,%c%V\/%L\ \ %P
+set statusline+=%{fugitive#statusline()}%=
+set statusline+=%w\ <%{&fileformat}>%\=\ [%o]\ %l,%c%V\/%L\ \ %P
 
 " =========================================
 " BUFFER SETTINGS
