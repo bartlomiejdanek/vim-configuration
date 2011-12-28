@@ -1,4 +1,3 @@
-
 Dependencies
 * Ruby (for the fuzzy finder plugin)
 * Exuberant Ctags (http://ctags.sourceforge.net/)
@@ -13,6 +12,9 @@ Dependencies
     libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
     libcairo2-dev libx11-dev libxpm-dev libxt-dev
 
+* you will also need ruby and python development packages, for instance 
+    python2.7-dev ruby1.9-dev
+
 After clone repository run
 
   git submodule update --init
@@ -24,7 +26,7 @@ Update submodules
 Your own VIM compilation
 
   hg clone https://vim.googlecode.com/hg/ vim
-  ./configure --enable-pythoninterp --with-features=huge --enable-gui=gnome2 --enable-cscope
+  ./configure --enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config/ --enable-rubyinterp --with-features=huge --enable-gui=gnome2 --enable-cscope
   make
   sudo make install
 
