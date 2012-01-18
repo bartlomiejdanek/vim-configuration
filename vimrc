@@ -271,3 +271,6 @@ if s:os =~ "Darwin"
 else
   so ~/.vim/os/linux.vim
 endif
+
+set runtimepath+=~/.vim/bundle/vim-addon-manager
+call vam#ActivateAddons(["vim-rails", "vim-rvm", "vim-commentary", "vim-unimpaired", "vim-haml", "vim-fugitive", "vim-endwise", "gem-ctags", "vim-bundler", "gem-browse", "vim-rake", "vim-ragtag", "vim-afterimage", "vim-cucumber", "vim-rspec", "supertab", "syntastic", "vim-javascript", "vim-textile", "nerdtree", "vim-taglist", "vim-latex", "html5", "vim-ruby", "rvm", "vim-project", "vim-matchit", "gitv", "vim-ruby-debugger", "vim-coffee-script", "vim-zencoding", "rfc5424", "vim-apidock", "rbrepl", "vim-notes", "vim-tlib", "vim-addon-mw-utils", "multiple-search", "vim-grep", "xterm-color-table", "vim-dart", "git-vim", "tabular", "gundo", "unimpaired"])
