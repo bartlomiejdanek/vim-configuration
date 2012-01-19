@@ -273,4 +273,4 @@ else
 endif
 
 set runtimepath+=~/.vim/bundle/vim-addon-manager
-call vam#ActivateAddons(["snipmate","The_NERD_tree", "rails", "vim-rvm", "commentary", "unimpaired", "Haml", "fugitive", "endwise", "ctags%610", "bundler", "rake", "ragtag", "afterimage", "Vim_Rspec", "SuperTab", "Syntastic", "javascript%1747", "vim-latex", "html5", "vim-ruby", "vimproject", "ruby-matchit", "gitv", "vim-ruby-debugger", "vim-coffee-script", "ZenCoding", "rfc5424", "apidock", "vim-addon-mw-utils", "grep", "xterm-color-table", "Dart", "git-vim", "Tabular", "Gundo", "unimpaired"])
+call vam#ActivateAddons(["Dart", "Gundo", "Haml", "Tabular", "The_NERD_tree", "Vim_Rspec", "ZenCoding", "afterimage", "apidock", "bundler", "commentary", "ctags%610", "endwise", "fugitive", "git-vim", "gitv", "html5", "javascript%1747", "ragtag", "rails", "rake", "rfc5424", "ruby-matchit", "snipmate", "syntastic2", "unimpaired", "unimpaired", "vim-addon-mw-utils", "vim-coffee-script", "vim-latex", "vim-ruby", "vim-ruby-debugger", "vim-rvm", "grep", "vimproject", "xterm-color-table"])

@@ -1,16 +1,20 @@
 Dependencies
 * Ruby (for the fuzzy finder plugin)
-* Exuberant Ctags (http://ctags.sourceforge.net/)
+* Exuberant Ctags (http://ctags.sourceforge.net)
+
+    apt-get install exuberant-ctag
+
 * Ncurses-term (in Linux only)
 
-    apt-get install exuberant-ctags ncurses-term
+    apt-get install ncurses-term
 
 
 * other stuff
 
     sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev \
     libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
-    libcairo2-dev libx11-dev libxpm-dev libxt-dev
+    libcairo2-dev libx11-dev libxpm-dev libxt-dev \
+    subversion mercurial git-core
 
 * you will also need ruby and python development packages, for instance 
     python2.7-dev ruby1.9-dev
@@ -21,7 +25,7 @@ After clone repository run
 
 Update submodules
 
-  git submodule foreach 'echo $path `git checkout master; git pull`'
+  git submodule foreach 'echo $path `git checkout master --force; git pull --force`'
 
 Your own VIM compilation
 

@@ -5,6 +5,11 @@
 [submodule "bundle/vim-addon-manager"]
 	path = bundle/vim-addon-manager
 	url = https://github.com/MarcWeber/vim-addon-manager.git
+        ignore = untracked
 [submodule "bundle/rbrepl.vim"]
 	path = bundle/rbrepl.vim
-	url = https://github.com/Bogdanp/rbrepl.vim.git
+	url = https://github.com/Bogdanp/rbrepl.vim.gitp
+        ignore = untracked
+[submodule "bundle/SuperTab"]
+	path = bundle/SuperTab
+	url = https://github.com/ervandew/supertab.git
