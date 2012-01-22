@@ -10,6 +10,3 @@
 	path = bundle/rbrepl.vim
 	url = https://github.com/Bogdanp/rbrepl.vim.gitp
         ignore = untracked
-[submodule "bundle/SuperTab"]
-	path = bundle/SuperTab
-	url = https://github.com/ervandew/supertab.git
