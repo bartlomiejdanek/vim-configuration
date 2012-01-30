@@ -163,6 +163,7 @@ noremap ,h :split^<cr>
 
 " CTags
 map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=.svn --exclude=log -R *<CR><CR>
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Stupid shift key fixes
 cmap WQ wq
@@ -273,4 +274,4 @@ else
 endif
 
 set runtimepath+=~/.vim/bundle/vim-addon-manager
-call vam#ActivateAddons(["Dart", "Gundo", "Haml", "Tabular", "The_NERD_tree", "Vim_Rspec", "ZenCoding", "afterimage", "apidock", "bundler", "commentary", "ctags%610", "endwise", "fugitive", "git-vim", "gitv", "html5", "javascript%1747", "ragtag", "rails", "rake", "rfc5424", "ruby-matchit", "snipmate", "syntastic2", "unimpaired", "unimpaired", "vim-addon-mw-utils", "vim-coffee-script", "vim-latex", "vim-ruby", "vim-ruby-debugger", "vim-rvm", "grep", "vimproject", "xterm-color-table", "SuperTab_continued."])
+call vam#ActivateAddons(["Dart", "Gundo", "Haml", "Tabular", "The_NERD_tree", "Vim_Rspec", "ZenCoding", "afterimage", "apidock", "bundler", "commentary", "endwise", "fugitive", "git-vim", "gitv", "html5", "javascript%1747", "ragtag", "rails", "rake", "rfc5424", "ruby-matchit", "snipmate", "syntastic2", "unimpaired", "unimpaired", "vim-addon-mw-utils", "vim-coffee-script", "vim-latex", "vim-ruby", "vim-ruby-debugger", "vim-rvm", "grep", "vimproject", "xterm-color-table", "SuperTab_continued.", "surround", "repeat", "buffet"])
