@@ -1,4 +1,5 @@
 set encoding=utf-8
+set termencoding=utf-8
 filetype on
 call pathogen#infect()
 syntax on
@@ -53,6 +54,11 @@ set cinoptions=:0,p0,t0
 set cinwords=if,else,while,do,for,switch,case
 set formatoptions=tcqr
 set foldmethod=manual
+set switchbuf=useopen,split
+
+" split settings
+set splitright
+set splitbelow
 
 " hide buffers when not displayed
 set hidden
@@ -210,6 +216,12 @@ nmap <M-Right> :bnext<CR>
 nmap <C-Left> :tabprev<CR>
 nmap <C-Right> :tabnext<CR>
 
+" fast save, close etc
+nmap <leader>w :w!<CR>
+nmap <leader>q :x!<CR>
+nmap <leader>a :q!<CR>
+nmap <leader>o :only!<CR>
+
 " =========================================
 " PLUGINS
 " =========================================
@@ -273,5 +285,6 @@ else
   so ~/.vim/os/linux.vim
 endif
 
+" VAM
 set runtimepath+=~/.vim/bundle/vim-addon-manager
-call vam#ActivateAddons(["Dart", "Gundo", "Haml", "Tabular", "The_NERD_tree", "Vim_Rspec", "ZenCoding", "afterimage", "apidock", "bundler", "commentary", "endwise", "fugitive", "git-vim", "gitv", "html5", "javascript%1747", "ragtag", "rails", "rake", "rfc5424", "ruby-matchit", "snipmate", "syntastic2", "unimpaired", "unimpaired", "vim-addon-mw-utils", "vim-coffee-script", "vim-latex", "vim-ruby", "vim-ruby-debugger", "vim-rvm", "grep", "vimproject", "xterm-color-table", "SuperTab_continued.", "surround", "repeat", "buffet"])
+call vam#ActivateAddons(["Dart", "Gundo", "Haml", "Tabular", "The_NERD_tree", "Vim_Rspec", "ZenCoding", "afterimage", "apidock", "bundler", "commentary", "endwise", "fugitive", "git-vim", "gitv", "html5", "javascript%1747", "ragtag", "rails", "rake", "rfc5424", "ruby-matchit", "snipmate", "syntastic2", "unimpaired", "unimpaired", "vim-addon-mw-utils", "vim-coffee-script", "vim-latex", "vim-ruby", "vim-ruby-debugger", "vim-rvm", "grep", "vimproject", "xterm-color-table", "SuperTab_continued.", "surround", "repeat", "buffet", "taglist-plus"])
