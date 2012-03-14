@@ -186,10 +186,10 @@ nnoremap Y y$
 nnoremap <Insert> <nop>
 
 " Stop using arrows
-noremap <Up> <nop>
-noremap <Down> <nop>
-noremap <Left> <nop>
-noremap <Right> <nop>
+" noremap <Up> <nop>
+" noremap <Down> <nop>
+" noremap <Left> <nop>
+" noremap <Right> <nop>
 
 " double 'a' as escape
 inoremap <silent> jj <ESC>
