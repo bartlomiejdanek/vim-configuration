@@ -8,5 +8,5 @@
         ignore = untracked
 [submodule "bundle/rbrepl.vim"]
 	path = bundle/rbrepl.vim
-	url = https://github.com/Bogdanp/rbrepl.vim.gitp
+	url = https://github.com/Bogdanp/rbrepl.vim.git
         ignore = untracked
