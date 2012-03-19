@@ -13,9 +13,21 @@ set spelllang=en_gb
 
 set t_Co=256
 set nocompatible
+let g:solarized_bold=0    "default value is 1
+let g:solarized_underline=0    "default value is 1
+let g:solarized_italic=0    "default value is 1
+let g:solarized_termcolors=256    "default value is 16
+let g:solarized_contrast="normal"    "default value is normal
+let g:solarized_visibility="high"    "default value is normal
+let g:solarized_diffmode="high"    "default value is normal
 syntax enable
-set background=dark
-colorscheme xoria256
+colorscheme solarized
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
+colorscheme solarized
 set cursorline
 
 " =========================================
@@ -156,9 +168,9 @@ let NERDTreeIgnore=['\.rbc$', '\~$']
 nmap <silent> <F8> \C
 
 " select all text - doesn't work with tmux
-map <C-a> ggVG
+" map <C-a> ggVG
 " fix file indent
-map <C-Z> gg=G
+" map <C-Z> gg=G
 
 " tabs
 nnoremap  tt :tabnew<cr>
@@ -178,6 +190,7 @@ cmap Qa qa
 cmap QA qa
 cmap qA qa
 cmap Tabe tabe
+cmap "E " "e"
 
 " Yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
@@ -287,4 +300,4 @@ endif
 
 " VAM
 set runtimepath+=~/.vim/bundle/vim-addon-manager
-call vam#ActivateAddons(["Dart", "Gundo", "Haml", "Tabular", "The_NERD_tree", "Vim_Rspec", "ZenCoding", "afterimage", "apidock", "bundler", "commentary", "endwise", "fugitive", "git-vim", "gitv", "html5", "javascript%1747", "ragtag", "rails", "rake", "rfc5424", "ruby-matchit", "snipmate", "syntastic2", "unimpaired", "unimpaired", "vim-addon-mw-utils", "vim-coffee-script", "vim-latex", "vim-ruby", "vim-ruby-debugger", "vim-rvm", "grep", "xterm-color-table", "SuperTab_continued.", "surround", "repeat", "buffet", "taglist-plus"])
+call vam#ActivateAddons(["Dart", "Gundo", "Haml", "Tabular", "The_NERD_tree", "Vim_Rspec", "ZenCoding", "afterimage", "apidock", "bundler", "commentary", "endwise", "fugitive", "git-vim", "gitv", "html5", "javascript%1747", "ragtag", "rails", "rake", "rfc5424", "ruby-matchit", "snipmate", "syntastic2", "unimpaired", "unimpaired", "vim-addon-mw-utils", "vim-coffee-script", "vim-latex", "vim-ruby", "vim-ruby-debugger", "vim-rvm", "grep", "xterm-color-table", "SuperTab_continued.", "surround", "repeat", "buffet", "taglist-plus", "Solarized"])
