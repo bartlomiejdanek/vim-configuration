@@ -21,13 +21,12 @@ let g:solarized_contrast="normal"    "default value is normal
 let g:solarized_visibility="high"    "default value is normal
 let g:solarized_diffmode="high"    "default value is normal
 syntax enable
-colorscheme solarized
 if has('gui_running')
-  set background=light
+  set background=dark
 else
   set background=dark
 endif
-colorscheme solarized
+colorscheme hemisu
 set cursorline
 
 " =========================================

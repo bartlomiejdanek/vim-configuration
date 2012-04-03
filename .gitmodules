@@ -10,3 +10,6 @@
 	path = bundle/rbrepl.vim
 	url = https://github.com/Bogdanp/rbrepl.vim.git
         ignore = untracked
+[submodule "bundle/hemisu"]
+	path = bundle/hemisu
+	url = https://github.com/noahfrederick/Hemisu.git
