@@ -22,7 +22,7 @@ let g:solarized_visibility="high"    "default value is normal
 let g:solarized_diffmode="high"    "default value is normal
 syntax enable
 if has('gui_running')
-  set background=dark
+  set background=light
 else
   set background=dark
 endif
