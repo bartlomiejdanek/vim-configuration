@@ -16,17 +16,19 @@ set nocompatible
 let g:solarized_bold=0    "default value is 1
 let g:solarized_underline=0    "default value is 1
 let g:solarized_italic=0    "default value is 1
-let g:solarized_termcolors=256    "default value is 16
+" let g:solarized_termcolors=256    "default value is 16
 let g:solarized_contrast="normal"    "default value is normal
 let g:solarized_visibility="high"    "default value is normal
 let g:solarized_diffmode="high"    "default value is normal
 syntax enable
 if has('gui_running')
-  set background=light
+  " set background=light
+  set background=dark
 else
   set background=dark
 endif
-colorscheme hemisu
+" colorscheme hemisu
+colorscheme solarized
 set cursorline
 
 " =========================================
