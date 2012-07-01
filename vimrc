@@ -10,25 +10,10 @@ set spelllang=en_gb
 " =========================================
 " THEME
 " =========================================
-
+"
+"
 set t_Co=256
 set nocompatible
-let g:solarized_bold=0    "default value is 1
-let g:solarized_underline=0    "default value is 1
-let g:solarized_italic=0    "default value is 1
-" let g:solarized_termcolors=256    "default value is 16
-let g:solarized_contrast="normal"    "default value is normal
-let g:solarized_visibility="high"    "default value is normal
-let g:solarized_diffmode="high"    "default value is normal
-syntax enable
-if has('gui_running')
-  " set background=light
-  set background=dark
-else
-  set background=dark
-endif
-" colorscheme hemisu
-colorscheme solarized
 set cursorline
 
 " =========================================
@@ -240,6 +225,14 @@ nmap <leader>o :only!<CR>
 " PLUGINS
 " =========================================
 
+" supertab
+let g:SuperTabCrMapping = 0
+
+let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
+let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
+let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
+
+
 " gem-ctags
 autocmd FileType ruby let &l:tags = pathogen#legacyjoin(pathogen#uniq(
       \ pathogen#split(&tags) +
@@ -273,6 +266,9 @@ au FileType qf nmap <buffer> <cr> <cr><c-w><c-p>
 let Grep_Skip_Files = '*.bak *~ *tags *.log'
 let Grep_Skip_Dirs = '.git .svn'"
 
+" FuzzyFinder
+map <C-a> :FufFile<CR>
+
 " =========================================
 " OTHER HACKS
 " =========================================
@@ -301,4 +297,4 @@ endif
 
 " VAM
 set runtimepath+=~/.vim/bundle/vim-addon-manager
-call vam#ActivateAddons(["Dart", "Gundo", "Haml", "Tabular", "The_NERD_tree", "Vim_Rspec", "ZenCoding", "afterimage", "apidock", "bundler", "commentary", "endwise", "fugitive", "git-vim", "gitv", "html5", "javascript%1747", "ragtag", "rails", "rake", "rfc5424", "ruby-matchit", "snipmate", "Syntastic", "unimpaired", "unimpaired", "vim-addon-mw-utils", "vim-coffee-script", "vim-latex", "vim-ruby", "vim-ruby-debugger", "vim-rvm", "grep", "xterm-color-table", "SuperTab_continued.", "surround", "repeat", "buffet", "taglist-plus", "Solarized"])
+call vam#ActivateAddons(["Dart", "Gundo", "Haml", "Tabular", "The_NERD_tree", "Vim_Rspec", "ZenCoding", "afterimage", "apidock", "bundler", "commentary", "endwise", "fugitive", "git-vim", "gitv", "html5", "javascript%1747", "ragtag", "rails", "rake", "rfc5424", "ruby-matchit", "Syntastic", "unimpaired", "unimpaired", "vim-addon-mw-utils", "vim-coffee-script", "vim-latex", "vim-ruby", "vim-ruby-debugger", "vim-rvm", "grep", "xterm-color-table", "surround", "repeat", "buffet", "taglist-plus", "Solarized", "FuzzyFinder", "better-snipmate-snippet", "SuperTab%1643"])
