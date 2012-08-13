@@ -21,4 +21,4 @@ let g:solarized_visibility="high"    "default value is normal
 let g:solarized_diffmode="high"    "default value is ormal
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme hybrid

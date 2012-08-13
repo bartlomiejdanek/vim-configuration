@@ -202,6 +202,7 @@ vnoremap <C-DOWN> :m'>+<CR>gv=gv
 vnoremap <C-UP> :m-2<CR>gv=gv
 
 " expand path to file
+map <leader>e :e ./
 map <leader>ew :e <C-R>=expand("%:p:h") ."/"<CR>
 map <leader>es :sp <C-R>=expand("%:p:h") ."/"<CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") ."/"<CR>
@@ -297,4 +298,4 @@ endif
 
 " VAM
 set runtimepath+=~/.vim/bundle/vim-addon-manager
-call vam#ActivateAddons(["Dart", "Gundo", "Haml", "Tabular", "The_NERD_tree", "Vim_Rspec", "ZenCoding", "afterimage", "apidock", "bundler", "commentary", "endwise", "fugitive", "git-vim", "gitv", "html5", "javascript%1747", "ragtag", "rails", "rake", "rfc5424", "ruby-matchit", "Syntastic", "unimpaired", "unimpaired", "vim-addon-mw-utils", "vim-coffee-script", "vim-latex", "vim-ruby", "vim-ruby-debugger", "vim-rvm", "grep", "xterm-color-table", "surround", "repeat", "buffet", "taglist-plus", "Solarized", "FuzzyFinder", "better-snipmate-snippet", "SuperTab%1643"])
+call vam#ActivateAddons(["Dart", "Gundo", "Haml", "Tabular", "The_NERD_tree", "Vim_Rspec", "ZenCoding", "afterimage", "apidock", "bundler", "commentary", "endwise", "fugitive", "git-vim", "gitv", "html5", "javascript%1747", "ragtag", "rails", "rake", "rfc5424", "ruby-matchit", "Syntastic", "unimpaired", "unimpaired", "vim-addon-mw-utils", "vim-coffee-script", "vim-latex", "vim-ruby", "vim-rvm", "grep", "xterm-color-table", "surround", "repeat", "buffet", "taglist-plus", "Solarized", "FuzzyFinder", "SuperTab%1643", "hybrid"])
