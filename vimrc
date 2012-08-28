@@ -53,6 +53,7 @@ set cinwords=if,else,while,do,for,switch,case
 set formatoptions=tcqr
 set foldmethod=manual
 set switchbuf=useopen,split
+set lazyredraw
 
 " split settings
 set splitright
