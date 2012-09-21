@@ -3,7 +3,9 @@ let g:Grep_Xargs_Options='-0'
 
 " set font for gui
 " set guifont=Droid\ Sans\ Mono\ Dotted:h10.5
-set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline:h10.5
+" set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline:h10.5
+" set guifont=Monaco\ for\ Powerline:h11
+set guifont=Monaco:h11
 
 " copy paste
 vmap <C-c> y<Esc>i
