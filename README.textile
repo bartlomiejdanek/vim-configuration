@@ -10,9 +10,9 @@ libxpm-dev libxt-dev subversion mercurial git-core
 
 * you will also need ruby and python development packages, for instance @python2.7-dev@ or @ruby1.9-dev@
 
-h2. Dependencies for Mac Os X
-* use @MacVim@ or @vim@
-* install via brew @brew install macvim@ or @brew install vim@
+h2. Dependencies for OS X
+* use @MacVim@ or @vim@, install via brew @brew install macvim@ or @brew install vim@
+* @brew install ctags@
 
 h2. Installation
 # Clone repository: @git clone https://github.com/bartekd/vim-configuration.git@
