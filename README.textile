@@ -20,7 +20,7 @@ h2. Installation
 # Link repository directory into your local vim directory (@ln -s path_to_repository ~/.vim@)
 # Link configuration file into your local configuration (@ln -s ~/.vim/vimrc ~/.vimrc@)
 # Ctags for rubygems
-** For rvm @echo 'gem-ctags >> ~/.rvm/gemsets/global.gems'@
+** For rvm @echo 'gem-ctags >> ~/.rvm/gemsets/default.gems'@
 ** or for system wide @gem install gem-ctags@
 
 h2. Ruby Debugger
