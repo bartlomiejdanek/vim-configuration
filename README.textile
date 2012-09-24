@@ -24,6 +24,11 @@ h2. Installation
 ** otherwise you can install @gem-ctags@ for each gemset @rvm all do gem install gem-ctags@
 ** or for system wide @gem install gem-ctags@
 
+h3. Configuration
+* core @vimrc@ file
+* linux @~/.vim/os/linux.vim@
+* os x @~/.vim/os/darwin.vim@
+
 h2. Ruby Debugger
 * rvm @echo 'let g:ruby_debugger_debug_mode = 1' >> .rvmrc@
 * debugging
