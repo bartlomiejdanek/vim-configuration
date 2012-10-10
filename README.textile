@@ -29,6 +29,10 @@ h3. Configuration
 * linux @~/.vim/os/linux.vim@
 * os x @~/.vim/os/darwin.vim@
 
+h3. Statusline - Powerline plugin
+
+If your statusline doesn't look too good, try "these fonts":https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
+
 h2. Ruby Debugger
 * rvm @echo 'let g:ruby_debugger_debug_mode = 1' >> .rvmrc@
 * debugging
