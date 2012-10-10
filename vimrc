@@ -109,7 +109,7 @@ au FileType python  set tabstop=2
 
 " GUI SETTINGS
 
-so ~/.vim/vim_gui.vim
+so ~/.vim/gui.vim
 
 " =========================================
 " KEYBINDS

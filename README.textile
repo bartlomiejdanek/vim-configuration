@@ -28,6 +28,7 @@ h3. Configuration
 * core @vimrc@ file
 * linux @~/.vim/os/linux.vim@
 * os x @~/.vim/os/darwin.vim@
+* gui (gvim/mvim) @~/.vim/gui.vim@
 
 h3. Statusline - Powerline plugin
 
