@@ -154,11 +154,6 @@ let NERDTreeIgnore=['\.rbc$', '\~$']
 " nmap <silent> <F8> :shell<cr>
 nmap <silent> <F8> \C
 
-" select all text - doesn't work with tmux
-" map <C-a> ggVG
-" fix file indent
-" map <C-Z> gg=G
-
 " tabs
 nnoremap  tt :tabnew<cr>
 
@@ -177,7 +172,6 @@ cmap Qa qa
 cmap QA qa
 cmap qA qa
 cmap Tabe tabe
-cmap "E " "e"
 
 " Yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
@@ -191,8 +185,14 @@ nnoremap <Insert> <nop>
 " noremap <Left> <nop>
 " noremap <Right> <nop>
 
+" double 'i' as escape
+inoremap <silent> ii <ESC>
 " double 'a' as escape
-inoremap <silent> jj <ESC>
+inoremap <silent> aa <ESC>
+" turn off Escape
+inoremap <silent> <ESC> <nop>
+" rebind 'a' as insert
+noremap <silent> a i
 
 " moving lines
 nnoremap <C-DOWN> :m+<CR>==
