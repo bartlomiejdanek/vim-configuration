@@ -1,11 +1,34 @@
 " rgrep fix for Mac Os X
 let g:Grep_Xargs_Options='-0'
 
-" set font for gui
-" set guifont=Droid\ Sans\ Mono\ Dotted:h10.5
-" set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline:h10.5
-" set guifont=Monaco\ for\ Powerline:h11
-set guifont=Monaco:h11
+if has("gui_macvim")
+  " Full screen means FULL screen
+  set fuoptions=maxvert,maxhorz
+
+  " Use the normal HIG movements, except for M-Up/Down
+  let macvim_skip_cmd_opt_movement = 1
+  set guifont=Monaco:h11
+  no   <D-Left>       <Home>
+  no!  <D-Left>       <Home>
+  no   <M-Left>       <C-Left>
+  no!  <M-Left>       <C-Left>
+
+  no   <D-Right>      <End>
+  no!  <D-Right>      <End>
+  no   <M-Right>      <C-Right>
+  no!  <M-Right>      <C-Right>
+
+  no   <D-Up>         <C-Home>
+  ino  <D-Up>         <C-Home>
+  imap <M-Up>         <C-o>{
+
+  no   <D-Down>       <C-End>
+  ino  <D-Down>       <C-End>
+  imap <M-Down>       <C-o>}
+
+  imap <M-BS>         <C-w>
+  inoremap <D-BS>     <esc>my0c`y
+end
 
 " copy paste
 vmap <C-c> y<Esc>i
@@ -15,13 +38,6 @@ imap <C-y> <Esc>ddi
 map <C-z> <Esc>
 imap <C-z> <Esc>ui
 
-" let g:solarized_bold=0    "default value is 1
-" let g:solarized_underline=0    "default value is 1
-" let g:solarized_italic=0    "default value is 1
-" " let g:solarized_termcolors=256    "default value is 16
-" let g:solarized_contrast="normal"    "default value is normal
-" let g:solarized_visibility="high"    "default value is normal
-" let g:solarized_diffmode="high"    "default value is ormal
 syntax enable
 set background=dark
 colorscheme hybrid
