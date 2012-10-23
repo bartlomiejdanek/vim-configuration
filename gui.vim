@@ -4,7 +4,6 @@
 
 " Remove all the UI cruft
 set guioptions=a
-set guioptions+=m
 
 highlight SpellBad term=underline gui=undercurl guisp=Orange
 

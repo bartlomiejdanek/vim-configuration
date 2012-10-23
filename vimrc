@@ -138,10 +138,6 @@ au BufNewFile,BufRead *.rdoc set ft=rdoc
 " Make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
 au FileType python  set tabstop=2
 
-" GUI SETTINGS
-
-so ~/.vim/gui.vim
-
 " =========================================
 " KEYBINDS
 " =========================================
@@ -259,6 +255,9 @@ vnoremap Q gq
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
+" nice hack for leader key in insert mode
+inoremap <silent> \ <ESC>\
+
 " =========================================
 " PLUGINS
 " =========================================
@@ -321,6 +320,10 @@ endif
 
 " Remove whitespaces on save
 autocmd BufWritePre * :%s/\s\+$//e
+
+" GUI SETTINGS
+
+so ~/.vim/gui.vim
 
 " Load OS config file for 'os' directory
 let s:os = system("uname")
