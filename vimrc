@@ -1,4 +1,5 @@
 set encoding=utf-8
+
 set termencoding=utf-8
 filetype on
 call pathogen#infect()
@@ -297,7 +298,7 @@ set modelines=10
 " rgrep
 map <C-f> :Rgrep<CR>
 au FileType qf nmap <buffer> <cr> <cr><c-w><c-p>
-let Grep_Skip_Files = '*.bak *~ *tags *.log'
+let Grep_Skip_Files = '*.bak *~ *tags *.log *.orig'
 let Grep_Skip_Dirs = '.git .svn'"
 
 " PowerLine
@@ -332,9 +333,6 @@ if s:os =~ "Darwin"
 else
   so ~/.vim/os/linux.vim
 endif
-
-" RVM
-autocmd BufEnter * Rvm
 
 " Fugitive
 nnoremap <leader>gd :Gdiff<cr>
