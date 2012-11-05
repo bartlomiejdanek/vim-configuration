@@ -258,7 +258,7 @@ nnoremap N Nzzzv
 
 " nice hack for leader key in insert mode
 inoremap <silent> \ <ESC>\
-
+inoremap <silent> // \
 " =========================================
 " PLUGINS
 " =========================================
