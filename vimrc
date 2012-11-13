@@ -51,7 +51,7 @@ set cinoptions=:0,p0,t0
 set cinwords=if,else,while,do,for,switch,case
 set formatoptions=tcqr
 set foldmethod=manual
-set switchbuf=useopen,split
+set switchbuf=usetab,newtab
 set lazyredraw
 
 " Don't try to highlight lines longer than 800 characters.
