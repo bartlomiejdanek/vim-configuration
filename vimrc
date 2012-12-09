@@ -148,10 +148,16 @@ noremap  <F1> :set invfullscreen<CR>
 inoremap <F1> <ESC>:set invfullscreen<CR>a
 
 " mapping for navigation
-noremap j gj
-noremap k gk
-noremap gj j
-noremap gk k
+noremap  <buffer> <silent> k gk
+noremap  <buffer> <silent> j gj
+noremap  <buffer> <silent> 0 g0
+noremap  <buffer> <silent> $ g$
+nnoremap <buffer> <Up> gk
+nnoremap <buffer> <Down> gj
+inoremap <buffer> <Up> <C-O>gk
+inoremap <buffer> <Down> <C-O>gj
+vnoremap <buffer> <Up> gk
+vnoremap <buffer> <Down> gj
 
 " enter fix - press enter and go to insert mode
 map <S-Enter> O<ESC>
@@ -377,5 +383,4 @@ call vam#ActivateAddons(["Dart", "Gundo", "Haml", "Tabular", "The_NERD_tree", "V
       \ "ragtag", "rails", "rake", "rfc5424", "ruby-matchit", "Syntastic", "unimpaired", "unimpaired",
       \ "vim-addon-mw-utils", "vim-coffee-script", "vimlatex", "vim-ruby", "vim-rvm", "grep", "xterm-color-table",
       \ "surround", "repeat", "buffet", "taglist-plus", "Solarized", "SuperTab%1643", "hybrid", "Powerline",
-      \ "Tail_Bundle", "snipmate-snippets", "vim-addon-sql"])
-" Command-T
+      \ "Tail_Bundle", "snipmate-snippets", "vim-addon-sql", "qfnotes"])
