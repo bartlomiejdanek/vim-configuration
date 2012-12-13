@@ -26,9 +26,12 @@ h2. Installation
 
 h3. Configuration
 * core @vimrc@ file
-* linux @~/.vim/os/linux.vim@
-* os x @~/.vim/os/darwin.vim@
-* gui (gvim/mvim) @~/.vim/gui.vim@
+* linux (with gui block) @~/.vim/os/linux.vim@
+* os x (with gui block) @~/.vim/os/darwin.vim@
+* keybinds (pure vim) @~/.vim/os/keybinds.vim@
+* plugins (with keybinds)  @~/.vim/os/plugins.vim@
+* buffers @~/.vim/os/buffers.vim@
+* colorscheme @~/.vim/colorscheme@
 
 h3. Statusline - Powerline plugin
 
