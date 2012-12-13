@@ -1,5 +1,8 @@
-" set font for gui
-set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 8.8
+if !has('gui_running')
+  " set font for gui
+  set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ 8.8
+  so ~/.vim/gvim.vim
+endif
 
 " copy paste
 " vnoremap <C-c> "+y
