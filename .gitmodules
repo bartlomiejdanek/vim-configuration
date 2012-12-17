@@ -8,6 +8,3 @@
 [submodule "bundle/xoria256"]
 	path = bundle/xoria256
 	url = https://github.com/bartekd/xoria256.vim.git
-[submodule "bundle/vim-addon-manager"]
-	path = bundle/vim-addon-manager
-	url = https://github.com/MarcWeber/vim-addon-manager.git
