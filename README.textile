@@ -49,4 +49,9 @@ h2. Updates
 * *submodules*
 @git submodule foreach 'echo $path `git checkout master --force; git pull --force`'@
 * *plugins*
-Run @:UpdateAddons@ from your vim instance
+Run @:UpdateAddons@ from your vim instance or
+
+bc. redir! > /tmp/log-vim.txt
+silent! ACTION
+
+where ACTION is either UpdateActivatedAddons or vam#InstallAddons()

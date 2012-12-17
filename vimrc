@@ -126,10 +126,49 @@ so ~/.vim/keybinds.vim
 so ~/.vim/colorscheme.vim
 
 " VAM
+fun! EnsureVamIsOnDisk(plugin_root_dir)
+  let vam_autoload_dir = a:plugin_root_dir.'/vim-addon-manager/autoload'
+  if isdirectory(vam_autoload_dir)
+    return 1
+  else
+    if 1 == confirm("Clone VAM into ".a:plugin_root_dir."?","&Y\n&N")
+      " I'm sorry having to add this reminder. Eventually it'll pay off.
+      call confirm("Remind yourself that most plugins ship with ".
+            \"documentation (README*, doc/*.txt). It is your ".
+            \"first source of knowledge. If you can't find ".
+            \"the info you're looking for in reasonable ".
+            \"time ask maintainers to improve documentation")
+      call mkdir(a:plugin_root_dir, 'p')
+      execute '!git clone --depth=1 git://github.com/MarcWeber/vim-addon-manager '.
+            \       shellescape(a:plugin_root_dir, 1).'/vim-addon-manager'
+      " VAM runs helptags automatically when you install or update
+      " plugins
+      exec 'helptags '.fnameescape(a:plugin_root_dir.'/vim-addon-manager/doc')
+    endif
+    return isdirectory(vam_autoload_dir)
+  endif
+endfun
+
+fun! SetupVAM()
+  " VAM install location:
+  let plugin_root_dir = expand('$HOME/.vim/bundle')
+  if !EnsureVamIsOnDisk(plugin_root_dir)
+    echohl ErrorMsg | echomsg "No VAM found!" | echohl NONE
+    return
+  endif
+  let &rtp.=(empty(&rtp)?'':',').plugin_root_dir.'/vim-addon-manager'
+
+  " Tell VAM which plugins to fetch & load:
+  call vam#ActivateAddons([], {'auto_install' : 1})
+  " sample: call vam#ActivateAddons(['pluginA','pluginB', ...], {'auto_install' : 0})
+
+endfun
+call SetupVAM()
+
 set runtimepath+=~/.vim/bundle/vim-addon-manager
 call vam#ActivateAddons(["Dart", "Gundo", "Haml", "Tabular", "The_NERD_tree", "Vim_Rspec", "ZenCoding", "afterimage",
       \ "apidock", "bundler%3207", "commentary", "endwise", "fugitive", "git-vim", "gitv", "html5", "javascript%1747",
       \ "ragtag", "rails", "rake", "rfc5424", "ruby-matchit", "Syntastic", "unimpaired", "unimpaired",
       \ "vim-addon-mw-utils", "vim-coffee-script", "vimlatex", "vim-ruby", "vim-rvm", "grep", "xterm-color-table",
       \ "surround", "repeat", "buffet", "taglist-plus", "Solarized", "SuperTab%1643", "hybrid", "Powerline",
-      \ "Tail_Bundle", "snipmate-snippets", "vim-addon-sql", "qfnotes"])
+      \ "Tail_Bundle", "snipmate-snippets", "vim-addon-sql", "qfnotes"], {'auto_install': 1})
