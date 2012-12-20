@@ -13,11 +13,6 @@ autocmd FileType ruby let &l:tags = pathogen#legacyjoin(pathogen#uniq(
       \ pathogen#split(&tags) +
       \ map(split($GEM_PATH,':'),'v:val."/gems/*/tags"')))
 
-" gitv
-nnoremap <C-g> :Gitv<CR>
-inoremap <C-g> :Gitv<CR>
-vnoremap <C-g> :Gitv<CR>
-
 " syntastic - enable syntastic syntax checking
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
@@ -60,7 +55,6 @@ endif
 
 " Remove whitespaces on save
 autocmd BufWritePre * :%s/\s\+$//e
-
 
 " Fugitive
 nnoremap <leader>gd :Gdiff<cr>
