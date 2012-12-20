@@ -2,10 +2,6 @@
 " KEYBINDS
 " =========================================
 
-" Dont want F1, ok it could be Tyrrell P34 (http://pl.wikipedia.org/wiki/Tyrrell_P34)
-noremap  <F1> :set invfullscreen<CR>
-inoremap <F1> <ESC>:set invfullscreen<CR>a
-
 " mapping for navigation
 noremap  <buffer> <silent> k gk
 noremap  <buffer> <silent> j gj
@@ -19,18 +15,17 @@ vnoremap <buffer> <Up> gk
 vnoremap <buffer> <Down> gj
 
 " enter fix - press enter and go to insert mode
-map <S-Enter> O<ESC>
-map <Enter> o<ESC>
+map <Enter> o
 
 " duplicate current line
 nnoremap <C-d> Yp
-" paste to current line
-"noremap p P
 
 " change location of current work directory
 map <Leader>C :cd %:p:h<CR>
 
 "f# keys
+noremap  <F1> :set invfullscreen<CR>
+inoremap <F1> <ESC>:set invfullscreen<CR>a
 nmap <silent> <F2> :NERDTreeToggle<CR>
 inoremap <silent> <F2> <ESC>:NERDTreeToggle<CR>
 nmap <silent> <F3> :GundoToggle<CR>
@@ -41,7 +36,7 @@ nmap <silent> <F7> :set invhls<CR>:set hls?<CR>
 nmap <silent> <F8> \C
 
 " tabs
-nnoremap  tt :tabnew<cr>
+nnoremap tt :tabnew<cr>
 
 " splits
 noremap ,v :vsp^<cr>
@@ -49,10 +44,8 @@ noremap ,h :split^<cr>
 
 " CTags
 map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=.svn --exclude=log -R *<CR><CR>
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Stupid shift key fixes
-
 if has("user_commands")
   command! -bang -nargs=? -complete=file E e<bang> <args>
   command! -bang -nargs=? -complete=file W w<bang> <args>
@@ -76,13 +69,6 @@ nnoremap <Insert> <nop>
 " noremap <Down> <nop>
 " noremap <Left> <nop>
 " noremap <Right> <nop>
-
-" double 'i' as escape
-inoremap <silent> ii <ESC>
-" double 'a' as escape
-inoremap <silent> aa <ESC>
-" turn off Escape
-" inoremap <silent> <ESC> <nop>
 
 " moving lines
 nnoremap <C-DOWN> :m+<CR>==
@@ -120,7 +106,3 @@ vnoremap Q gq
 " Keep search matches in the middle of the window.
 nnoremap n nzzzv
 nnoremap N Nzzzv
-
-" nice hack for leader key in insert mode
-inoremap <silent> \ <ESC>\
-inoremap <silent> // \
