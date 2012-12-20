@@ -15,6 +15,7 @@ vnoremap <buffer> <Up> gk
 vnoremap <buffer> <Down> gj
 
 " enter fix - press enter and go to insert mode
+map <M-Enter> O
 map <Enter> o
 
 " duplicate current line
