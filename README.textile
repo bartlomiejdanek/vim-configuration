@@ -54,4 +54,4 @@ Run @:UpdateAddons@ from your vim instance or
 bc. redir! > /tmp/log-vim.txt
 silent! ACTION
 
-where ACTION is either UpdateActivatedAddons or vam#InstallAddons()
+where ACTION is either @UpdateActivatedAddons@ or @vam#InstallAddons()@
