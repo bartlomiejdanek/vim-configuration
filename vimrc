@@ -171,4 +171,4 @@ call vam#ActivateAddons(["Dart", "Gundo", "Haml", "Tabular", "The_NERD_tree", "V
       \ "ragtag", "rails", "rake", "rfc5424", "ruby-matchit", "Syntastic", "unimpaired", "unimpaired",
       \ "vim-addon-mw-utils", "vim-coffee-script", "vimlatex", "vim-ruby", "vim-rvm", "grep", "xterm-color-table",
       \ "surround", "repeat", "buffet", "taglist-plus", "Solarized", "SuperTab%1643", "hybrid", "Powerline",
-      \ "Tail_Bundle", "snipmate-snippets", "vim-addon-sql", "qfnotes"], {'auto_install': 1})
+      \ "Tail_Bundle", "snipmate-snippets", "vim-addon-sql", "qfnotes", "Auto_Pairs"], {'auto_install': 1})
