@@ -91,3 +91,6 @@ let NERDTreeDirArrows = 1
 let NERDChristmasTree = 1
 let NERDTreeChDirMode = 2
 let NERDTreeMapJumpFirstChild = 'gK'
+
+" Ctrlp
+map <leader>t :CtrlPMixed<CR>
