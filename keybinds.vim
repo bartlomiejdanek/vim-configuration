@@ -44,7 +44,7 @@ noremap ,v :vsp^<cr>
 noremap ,h :split^<cr>
 
 " CTags
-map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=.svn --exclude=log -R *<CR><CR>
+map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=coverage --exclude=.svn --exclude=log -R *<CR><CR>
 
 " Stupid shift key fixes
 if has("user_commands")
