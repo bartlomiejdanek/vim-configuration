@@ -95,3 +95,9 @@ let NERDTreeMapJumpFirstChild = 'gK'
 " Ctrlp
 map <leader>t :CtrlPMixed<CR>
 let g:ctrlp_max_files = 0
+
+"Colorizer
+let g:colorizer_auto_color = 1
+let g:colorizer_auto_filetype='css,scss,sass'
+let g:colorizer_skip_comments = 1
+let g:colorizer_colornames = 0
