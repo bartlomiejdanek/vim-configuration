@@ -35,7 +35,7 @@ au FileType qf nmap <buffer> <cr> <cr><c-w><c-p>
 let Grep_Skip_Files = '*.bak *~ *tags *.log *.orig'
 let Grep_Skip_Dirs = '.git .svn'"
 
-" PowerLine
+" " PowerLine
 let g:Powerline_symbols = 'fancy'
 
 " =========================================

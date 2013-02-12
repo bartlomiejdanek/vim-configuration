@@ -5,7 +5,8 @@ let g:Grep_Xargs_Options='-0'
 if has("gui_macvim")
   " Use the normal HIG movements, except for M-Up/Down
   let macvim_skip_cmd_opt_movement = 1
-  set guifont=Monaco:h11
+  " set guifont=Source\ Code\ Pro\ For\ Powerline:h12
+  set guifont=Monaco\ For\ Powerline:h11
 
   highlight SpellBad term=underline gui=undercurl guisp=Orange
 
