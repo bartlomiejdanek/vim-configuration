@@ -7,13 +7,14 @@ if has("gui_macvim")
   let macvim_skip_cmd_opt_movement = 1
   " set guifont=Source\ Code\ Pro\ For\ Powerline:h12
   set guifont=Monaco\ For\ Powerline:h11
+  " set guifont=Monaco:h11
 
   highlight SpellBad term=underline gui=undercurl guisp=Orange
 
   " Different cursors for different modes.
   set guicursor=n-c:block-Cursor-blinkon0
   set guicursor+=v:block-vCursor-blinkon0
-  set noantialias
+  set antialias
   set guioptions=a
 end
 
