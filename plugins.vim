@@ -101,3 +101,15 @@ let g:colorizer_auto_color = 1
 let g:colorizer_auto_filetype='css,scss,sass'
 let g:colorizer_skip_comments = 1
 let g:colorizer_colornames = 0
+
+if ! has('gui_running')
+    set ttimeoutlen=10
+    augroup FastEscape
+        autocmd!
+        au InsertEnter * set timeoutlen=0
+        au InsertLeave * set timeoutlen=1000
+    augroup END
+endif
+
+" RVM
+autocmd BufEnter * Rvm
