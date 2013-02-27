@@ -33,7 +33,7 @@ set modelines=10
 map <C-f> :Rgrep<CR>
 au FileType qf nmap <buffer> <cr> <cr><c-w><c-p>
 let Grep_Skip_Files = '*.bak *~ *tags *.log *.orig'
-let Grep_Skip_Dirs = '.git .svn'"
+let Grep_Skip_Dirs = '.git'
 
 " " PowerLine
 let g:Powerline_symbols = 'fancy'
@@ -113,3 +113,7 @@ endif
 
 " RVM
 autocmd BufEnter * Rvm
+
+" vim-rails
+" disable the error
+let g:rails_abbreviations=0
