@@ -114,6 +114,5 @@ endif
 " RVM
 autocmd BufEnter * Rvm
 
-" vim-rails
-" disable the error
-let g:rails_abbreviations=0
+" vim-gitgutter
+let g:gitgutter_enabled = 1
