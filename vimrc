@@ -3,7 +3,7 @@ set encoding=utf-8
 set termencoding=utf-8
 filetype on
 call pathogen#infect()
-syntax on
+syntax sync minlines=1000
 filetype plugin indent on
 set spelllang=en_gb
 " set spell
@@ -14,7 +14,7 @@ set spelllang=en_gb
 
 set t_Co=256
 set nocompatible
-set cursorline
+set nocursorline
 
 " =========================================
 " BASIC CONFIGURATION
@@ -72,15 +72,6 @@ au FocusLost * :silent! wall
 
 " Resize splits when the window is resized
 au VimResized * :wincmd =
-
-" Cursorline {{{
-" Only show cursorline in the current window and in normal mode.
-
-augroup cline
-    au!
-    au WinLeave,InsertEnter * set nocursorline
-    au WinEnter,InsertLeave * set cursorline
-augroup END
 
 augroup trailing
     au!
@@ -168,8 +159,8 @@ call SetupVAM()
 set runtimepath+=~/.vim/bundle/vim-addon-manager
 call vam#ActivateAddons(["Dart", "Gundo", "Haml", "Tabular", "The_NERD_tree", "Vim_Rspec", "ZenCoding", "afterimage",
       \ "apidock", "bundler%3207", "commentary", "endwise", "fugitive", "git-vim", "gitv", "html5", "javascript%1747",
-      \ "ragtag", "rails", "rake", "rfc5424", "ruby-matchit", "Syntastic", "unimpaired", "powerline",
-      \ "vim-addon-mw-utils", "vim-coffee-script", "vimlatex", "vim-ruby", "vim-rvm", "grep", "xterm-color-table",
+      \ "ragtag", "rails", "rake", "rfc5424", "ruby-matchit", "Syntastic", "unimpaired", "powerline", "vim-multiedit",
+      \ "vim-addon-mw-utils", "vim-coffee-script", "vimlatex", "vim-rvm", "grep", "xterm-color-table", "vim-ruby",
       \ "surround", "repeat", "buffet", "taglist-plus", "Solarized", "SuperTab%1643", "hybrid", "powerline", "vim-gitgutter",
       \ "Tail_Bundle", "snipmate-snippets", "vim-addon-sql", "qfnotes", "Auto_Pairs", "ctrlp", "Colorizer"], {'auto_install': 1})
 
