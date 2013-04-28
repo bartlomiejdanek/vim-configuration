@@ -162,7 +162,7 @@ call vam#ActivateAddons(["Haml", "Tabular", "The_NERD_tree", "Vim_Rspec", "ZenCo
       \ "ragtag", "rails", "rake", "rfc5424", "ruby-matchit", "Syntastic", "unimpaired", "powerline", "vim-multiedit",
       \ "vim-addon-mw-utils", "vim-coffee-script", "vim-rvm", "grep", "xterm-color-table", "vim-ruby",
       \ "surround", "repeat", "buffet", "taglist-plus", "Solarized", "SuperTab%1643", "hybrid", "powerline", "vim-gitgutter",
-      \ "Tail_Bundle", "snipmate-snippets", "vim-addon-sql", "qfnotes", "Auto_Pairs", "ctrlp", "Colorizer"], {'auto_install': 1})
+      \ "Tail_Bundle", "vim-addon-sql", "Auto_Pairs", "ctrlp", "Colorizer"], {'auto_install': 1})
 
 " Some extra stuff for nodejs
 " jade", "vim-stylus", "JavaScript_Indent"
