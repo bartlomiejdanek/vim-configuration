@@ -7,4 +7,4 @@
 	url = https://github.com/noahfrederick/Hemisu.git
 [submodule "bundle/xoria256"]
 	path = bundle/xoria256
-	url = https://github.com/bartekd/xoria256.vim.git
+	url = https://github.com/bartlomiejdanek/xoria256.vim.git
