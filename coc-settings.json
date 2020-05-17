@@ -1,0 +1,45 @@
+{
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+  "coc.preferences.bracketEnterImprove": true,
+
+  "suggest.enablePreselect": false,
+  "suggest.numberSelect": false,
+  "suggest.languageSourcePriority": 99,
+  "suggest.noselect": false,
+  "suggest.lowPrioritySourceLimit": 5,
+  "suggest.triggerAfterInsertEnter": true,
+  "suggest.snippetIndicator": " →",
+  "suggest.acceptSuggestionOnCommitCharacter": true,
+  "suggest.minTriggerInputLength": 1,
+
+  "snippets.loadFromExtensions": true,
+  "snippets.ultisnips.enable": true,
+
+  "yank.priority": 85,
+  "yank.enableCompletion": false,
+
+  "coc.source.file.priority": 10,
+  "coc.source.around.priority": 3,
+  "coc.source.buffer.priority": 1,
+
+  "git.enableGutters": true,
+  "git.addGBlameToBufferVar": true,
+  "git.addGBlameToVirtualText": false,
+  "git.addedSign.hlGroup": "GitGutterAdd",
+  "git.changedSign.hlGroup": "GitGutterChange",
+  "git.removedSign.hlGroup": "GitGutterDelete",
+  "git.topRemovedSign.hlGroup": "GitGutterDelete",
+  "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
+
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.showAbbreviationSuggestions": true,
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["terraform"],
+      "initializationOptions": {}
+    }
+  }
+}
