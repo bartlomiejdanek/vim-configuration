@@ -1,10 +1,3 @@
-"=========================================
-" BUFFER SETTINGS
-" =========================================
-
-" Capfile, Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,Guardfile} set ft=ruby
-
 augroup LargeFile
   let g:large_file = 10485760 " 10MB
 
@@ -25,13 +18,8 @@ augroup LargeFile
         \ endif
 augroup END
 
-" make uses real tabs
-au FileType make set noexpandtab
-
-" autocmd CursorHold * silent call CocActionAsync('highlight')
 autocmd FileType vimwiki set ft=markdown
 autocmd InsertEnter * norm zz
-set splitbelow splitright
 
 " Remember last location in file
 if has("autocmd")
@@ -50,7 +38,6 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 au FocusLost * :silent! wall
 au VimResized * :wincmd =
-" set completeopt-=preview
 
 augroup trailing
   au!

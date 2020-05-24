@@ -56,8 +56,6 @@ set completeopt=menuone,noinsert,noselect,longest
 
 set undofile
 set showtabline=2
-set splitright
-set splitbelow
 set hidden
 set nobackup                     " Enable creation of backup file.
 set nowritebackup
@@ -75,3 +73,4 @@ set signcolumn=yes
 set grepprg=rg
 set inccommand=nosplit
 set conceallevel=2
+set splitbelow splitright
