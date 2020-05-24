@@ -29,9 +29,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhinz/vim-startify'
 
     Plug 'airblade/vim-gitgutter'
-    Plug 'SirVer/ultisnips'
-    Plug 'Shougo/neosnippet.vim'
-    Plug 'Shougo/neosnippet-snippets'
     Plug 'junegunn/gv.vim'
 
     Plug 'liuchengxu/vim-which-key'
@@ -57,5 +54,4 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vim-syntastic/syntastic'
     Plug 'vimwiki/vimwiki'
     Plug 'juliosueiras/terraform-lsp'
-    Plug 'juliosueiras/vim-terraform-snippets'
 call plug#end()

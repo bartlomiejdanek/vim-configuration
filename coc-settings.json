@@ -14,7 +14,7 @@
   "suggest.minTriggerInputLength": 1,
 
   "snippets.loadFromExtensions": true,
-  "snippets.ultisnips.enable": true,
+  "snippets.ultisnips.enable": false,
 
   "yank.priority": 85,
   "yank.enableCompletion": false,
