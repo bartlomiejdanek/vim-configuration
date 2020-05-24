@@ -54,4 +54,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vim-syntastic/syntastic'
     Plug 'vimwiki/vimwiki'
     Plug 'juliosueiras/terraform-lsp'
+    Plug 'honza/vim-snippets'
 call plug#end()

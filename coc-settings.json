@@ -2,7 +2,13 @@
   "coc.preferences.extensionUpdateCheck": "daily",
   "coc.preferences.currentFunctionSymbolAutoUpdate": true,
   "coc.preferences.bracketEnterImprove": true,
-
+  "coc.preferences.hoverTarget": "float",
+  // autoformat
+  "coc.preferences.formatOnSaveFiletypes": [
+    "yaml",
+    "json",
+    "tf"
+  ],
   "suggest.enablePreselect": false,
   "suggest.numberSelect": false,
   "suggest.languageSourcePriority": 99,
@@ -12,17 +18,17 @@
   "suggest.snippetIndicator": " →",
   "suggest.acceptSuggestionOnCommitCharacter": true,
   "suggest.minTriggerInputLength": 1,
-
   "snippets.loadFromExtensions": true,
-  "snippets.ultisnips.enable": false,
-
+  "snippets.ultisnips.enable": true,
+  "snippets.ultisnips.directories": [
+    "UltiSnips",
+    "~/.config/nvim/snips"
+  ],
   "yank.priority": 85,
   "yank.enableCompletion": false,
-
   "coc.source.file.priority": 10,
   "coc.source.around.priority": 3,
   "coc.source.buffer.priority": 1,
-
   "git.enableGutters": true,
   "git.addGBlameToBufferVar": true,
   "git.addGBlameToVirtualText": false,
@@ -31,14 +37,15 @@
   "git.removedSign.hlGroup": "GitGutterDelete",
   "git.topRemovedSign.hlGroup": "GitGutterDelete",
   "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
-
   "emmet.showExpandedAbbreviation": "always",
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.showAbbreviationSuggestions": true,
   "languageserver": {
     "terraform": {
       "command": "terraform-lsp",
-      "filetypes": ["terraform"],
+      "filetypes": [
+        "terraform"
+      ],
       "initializationOptions": {}
     }
   }
