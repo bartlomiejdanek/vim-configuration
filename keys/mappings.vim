@@ -128,3 +128,6 @@ inoremap <expr> ( ConditionalPairMap('(', ')')
 inoremap <expr> { ConditionalPairMap('{', '}')
 inoremap <expr> [ ConditionalPairMap('[', ']')
 inoremap <expr> < ConditionalPairMap('<', '>')
+
+" You can't stop me
+cmap w!! w !sudo tee %

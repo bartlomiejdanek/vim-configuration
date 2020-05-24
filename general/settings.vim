@@ -55,30 +55,14 @@ set complete=.,w,b,u,t,i
 set completeopt=menuone,noinsert,noselect,longest
 
 set undofile
-set showtabline=1
-au FocusLost * :silent! wall
-au VimResized * :wincmd =
-" set completeopt-=preview
-
-augroup trailing
-  au!
-  au InsertEnter * :set listchars-=
-      \eol:$,
-      \tab:>-,
-      \trail:⌴,
-      \extends:>,
-      \precedes:<
-augroup END
-
+set showtabline=2
 set splitright
 set splitbelow
-
 set hidden
 set nobackup                     " Enable creation of backup file.
 set nowritebackup
 set directory=./tmp              " Where temporary files will go.
 set noswapfile
-
 set shiftwidth=2
 set softtabstop=2
 set expandtab
@@ -91,6 +75,3 @@ set signcolumn=yes
 set grepprg=rg
 set inccommand=nosplit
 set conceallevel=2
-
-" You can't stop me
-cmap w!! w !sudo tee %

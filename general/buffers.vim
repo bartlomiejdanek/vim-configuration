@@ -47,3 +47,17 @@ autocmd BufWritePre * :%s/\s\+$//e
 " (Optional)Hide Info(Preview) window after completions
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+au FocusLost * :silent! wall
+au VimResized * :wincmd =
+" set completeopt-=preview
+
+augroup trailing
+  au!
+  au InsertEnter * :set listchars-=
+      \eol:$,
+      \tab:>-,
+      \trail:⌴,
+      \extends:>,
+      \precedes:<
+augroup END
