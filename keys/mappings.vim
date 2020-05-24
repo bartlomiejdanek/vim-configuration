@@ -19,7 +19,6 @@ nnoremap <S-TAB> :bp<CR>
 
 map <leader>d :bd<cr>
 
-
 " Alternate way to save
 nnoremap <C-s> :w<CR>
 " Alternate way to quit
@@ -69,7 +68,6 @@ nnoremap <leader>gco :Gcheckout<cr>
 nnoremap <leader>gci :Gcommit<cr>
 nnoremap <leader>gm :Gmove<cr>
 nnoremap <leader>gr :Gremove<cr>
-nnoremap <leader>gl :Shell git gl -18<cr>:wincmd \|<cr>
 
 " enter command trick
 nnoremap ; :
@@ -113,7 +111,6 @@ noremap n nzz
 noremap N Nzz
 noremap <C-u> <C-u>zz
 noremap <C-d> <C-d>zz
-noremap N Nzz
 nnoremap o o<ESC>zza
 nnoremap O O<ESC>zza
 nnoremap a a<ESC>zza
@@ -130,3 +127,4 @@ endfunction
 inoremap <expr> ( ConditionalPairMap('(', ')')
 inoremap <expr> { ConditionalPairMap('{', '}')
 inoremap <expr> [ ConditionalPairMap('[', ']')
+inoremap <expr> < ConditionalPairMap('<', '>')

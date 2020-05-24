@@ -55,4 +55,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vimwiki/vimwiki'
     Plug 'juliosueiras/terraform-lsp'
     Plug 'honza/vim-snippets'
+    Plug 'ryanoasis/vim-devicons'
 call plug#end()
