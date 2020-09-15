@@ -18,8 +18,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Plug 'jiangmiao/auto-pairs'
     Plug 'dracula/vim'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+    " Plug 'vim-airline/vim-airline'
+    " Plug 'vim-airline/vim-airline-themes'
     Plug 'junegunn/rainbow_parentheses.vim'
 
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -31,11 +31,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'airblade/vim-gitgutter'
     Plug 'junegunn/gv.vim'
 
-    Plug 'liuchengxu/vim-which-key'
-
     Plug 'justinmk/vim-sneak'
     Plug 'tpope/vim-commentary'
-    Plug 'tpope/vim-endwise'
+    " Plug 'tpope/vim-endwise'
     Plug 'tpope/vim-eunuch'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rails'
@@ -47,6 +45,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'editorconfig/editorconfig-vim'
     Plug 'ekalinin/Dockerfile.vim'
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'sebdah/vim-delve'
     Plug 'hashivim/vim-hashicorp-tools'
     Plug 'mbbill/undotree'
     Plug 'mechatroner/rainbow_csv'
@@ -56,4 +55,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'juliosueiras/terraform-lsp'
     Plug 'honza/vim-snippets'
     Plug 'ryanoasis/vim-devicons'
+    Plug 'https://bitbucket.org/jplanisky/vim-worklog/src/master/'
 call plug#end()

@@ -21,7 +21,6 @@ set nowrap
 set wildmenu
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,*.zip,*.gz,*.bz,*.tar,*.jpg,*.png,*.gif,*.avi,*.wmv,*.ogg,*.mp3,*.mov,*.DS_Store,*.orig,*.*~
-set clipboard+=unnamed
 set clipboard=unnamedplus
 set ruler
 set incsearch

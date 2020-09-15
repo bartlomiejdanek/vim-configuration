@@ -1,11 +1,11 @@
 " Better nav for omnicomplete
-inoremap <expr> <c-j> ("\<C-n>")
-inoremap <expr> <c-k> ("\<C-p>")
+inoremap <expr> <TAB> ("\<C-n>")
+inoremap <expr> <S-TAB> ("\<C-p>")
 
 " Use alt + hjkl to resize windows
+nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-j>    :resize -2<CR>
 nnoremap <M-k>    :resize +2<CR>
-nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
 
 " I hate escape more than anything else
@@ -44,12 +44,12 @@ nmap <silent> <F3> :set invwrap<CR>:set wrap?<CR>
 nmap <silent> <F4> :set invhls<CR>:set hls?<CR>
 
 " moving lines
-nnoremap <S-j> :m+<CR>==
-nnoremap <S-k> :m-2<CR>==
-inoremap <S-j> <Esc>:m+<CR>==gi
-inoremap <S-k> <Esc>:m-2<CR>==gi
-vnoremap <S-j> :m'>+<CR>gv=gv
-vnoremap <S-k> :m-2<CR>gv=gv
+nnoremap <M-J> :m+<CR>==
+nnoremap <M-K> :m-2<CR>==
+inoremap <M-J> <Esc>:m+<CR>==gi
+inoremap <M-K> <Esc>:m-2<CR>==gi
+vnoremap <M-J> :m'>+<CR>gv=gv
+vnoremap <M-K> :m-2<CR>gv=gv
 
 " expand path to file
 map <leader>e :e .
@@ -97,8 +97,8 @@ function! GoToNextIndent(inc)
   endif
 endfunction
 
-nnoremap <silent> <C-j> :call GoToNextIndent(1)<CR>
-nnoremap <silent> <C-k> :call GoToNextIndent(-1)<CR>
+nnoremap <silent> <S-J> :call GoToNextIndent(1)<CR>
+nnoremap <silent> <S-K> :call GoToNextIndent(-1)<CR>
 
 nnoremap k kzz
 nnoremap j jzz
@@ -131,3 +131,16 @@ inoremap <expr> < ConditionalPairMap('<', '>')
 
 " You can't stop me
 cmap w!! w !sudo tee %
+
+" shift key fixes
+if has("user_commands")
+  command! -bang -nargs=? -complete=file E e<bang> <args>
+  command! -bang -nargs=? -complete=file W w<bang> <args>
+  command! -bang -nargs=? -complete=file Wq wq<bang> <args>
+  command! -bang -nargs=? -complete=file WQ wq<bang> <args>
+  command! -bang Wa wa<bang>
+  command! -bang WA wa<bang>
+  command! -bang Q q<bang>
+  command! -bang QA qa<bang>
+  command! -bang Qa qa<bang>
+endif
