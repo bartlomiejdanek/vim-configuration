@@ -24,8 +24,6 @@
     "UltiSnips",
     "~/.config/nvim/snips"
   ],
-  "yank.priority": 85,
-  "yank.enableCompletion": false,
   "coc.source.file.priority": 10,
   "coc.source.around.priority": 3,
   "coc.source.buffer.priority": 1,
@@ -40,6 +38,10 @@
   "emmet.showExpandedAbbreviation": "always",
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.showAbbreviationSuggestions": true,
+  "yaml.validate": true,
+  "yaml.completion": true,
+  "yaml.format.enable": true,
+  "yaml.trace.server": "verbose",
   "languageserver": {
     "terraform": {
       "command": "terraform-lsp",
