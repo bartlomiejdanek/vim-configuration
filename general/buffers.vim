@@ -48,3 +48,11 @@ augroup trailing
       \extends:>,
       \precedes:<
 augroup END
+
+let NERDTreeShowHidden=1
+au BufRead,BufNewFile */playbooks/*.yml set filetype=yaml.ansible
+augroup ansible_vim_fthosts
+  autocmd!
+  autocmd BufNewFile,BufRead hosts setfiletype yaml.ansible
+augroup END
+set rtp+=/usr/local/opt/fzf

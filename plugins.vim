@@ -55,5 +55,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'juliosueiras/terraform-lsp'
     Plug 'honza/vim-snippets'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'https://bitbucket.org/jplanisky/vim-worklog/src/master/'
+    Plug 'machakann/vim-highlightedyank'
+    Plug 'pearofducks/ansible-vim'
+    Plug 'wincent/ferret'
+    Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
+
 call plug#end()
