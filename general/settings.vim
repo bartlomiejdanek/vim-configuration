@@ -64,6 +64,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set autoindent
+set cindent
 set fo=1
 set cmdheight=1
 set updatetime=300

@@ -11,7 +11,7 @@ nnoremap <M-l>    :vertical resize +2<CR>
 " I hate escape more than anything else
 inoremap jk <Esc>
 inoremap kj <Esc>
-
+inoremap jj <Esc>
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bn<CR>
 " SHIFT-TAB will go back
@@ -37,7 +37,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 "f# keys
-nmap <silent> <F1> :NERDTreeToggle<CR>
+" nmap <silent> <F1> :NERDTreeToggle<CR>
 inoremap <silent> <F1> <ESC>:NERDTreeToggle<CR>
 nmap <silent> <F2> :set invlist<CR>:set list?<CR>
 nmap <silent> <F3> :set invwrap<CR>:set wrap?<CR>
