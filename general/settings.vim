@@ -29,7 +29,7 @@ set ignorecase
 set smartcase
 set showmatch
 set endofline
-set number! relativenumber!
+set number! " relativenumber!
 set linebreak
 set showbreak=...
 "set autowrite

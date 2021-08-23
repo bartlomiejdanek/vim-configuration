@@ -52,12 +52,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'terryma/vim-multiple-cursors'
     Plug 'vim-syntastic/syntastic'
     Plug 'vimwiki/vimwiki'
-    Plug 'juliosueiras/terraform-lsp'
+    " Plug 'juliosueiras/terraform-lsp'
     Plug 'honza/vim-snippets'
     Plug 'ryanoasis/vim-devicons'
     Plug 'machakann/vim-highlightedyank'
     Plug 'pearofducks/ansible-vim'
     Plug 'wincent/ferret'
     Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
+    Plug 'hashivim/vim-terraform'
 
 call plug#end()

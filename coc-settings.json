@@ -44,11 +44,16 @@
   "yaml.trace.server": "verbose",
   "languageserver": {
     "terraform": {
-      "command": "terraform-lsp",
-      "filetypes": [
-        "terraform"
+      "command": "terraform-ls",
+      "args": [
+        "serve"
       ],
-      "initializationOptions": {}
+      "filetypes": [
+        "terraform",
+        "tf"
+      ],
+      "initializationOptions": {},
+      "settings": {}
     },
     "golang": {
       "command": "gopls",

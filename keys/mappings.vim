@@ -43,6 +43,19 @@ nmap <silent> <F2> :set invlist<CR>:set list?<CR>
 nmap <silent> <F3> :set invwrap<CR>:set wrap?<CR>
 nmap <silent> <F4> :set invhls<CR>:set hls?<CR>
 
+" Relative or absolute number lines
+function! NumberToggle()
+    if(&nu == 1)
+        set nu!
+        set rnu
+    else
+        set nornu
+        set nu
+    endif
+endfunction
+
+nnoremap <silent> <F5> :call NumberToggle()<CR>
+
 " moving lines
 nnoremap <M-J> :m+<CR>==
 nnoremap <M-K> :m-2<CR>==
