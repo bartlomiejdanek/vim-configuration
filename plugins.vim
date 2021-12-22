@@ -60,5 +60,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'wincent/ferret'
     Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
     Plug 'hashivim/vim-terraform'
+    Plug 'chrisbra/Colorizer'
 
 call plug#end()

@@ -26,3 +26,5 @@ let g:startify_update_oldfiles = 1
 " function! StartifyEntryFormat()
 "   return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
 " endfunction
+"
+set viminfo='100,n$HOME/.vim/files/info/viminfo
